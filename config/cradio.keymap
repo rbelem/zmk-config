@@ -67,15 +67,15 @@
 
     symbol_layer {
 // -----------------------------------------------------------------
-// |     |  \  |  %  |  $  |     | |     |  ^  |  {  |  }  |     |
-// |  *  |  (  |  )  |  :  |     | |     |  "  |  [  |  ]  |  ;  |
-// |     |  `  |  @  |  &  |     | |     |  #  |  <  |  >  |-FUN-|
-//                   |_SYM_| SPC | | RET | ESC |
+// |  !  |  @  |  #  |  $  |  %  | |  ^  |  &  |  *  |  -  |  =  |
+// |     |     |  ~  |  '  |  `  | |  |  |  [  |  {  |  }  |  ]  |
+// | FUN |     |     |  "  |     | |  \  |  /  |  (  |  )  |     |
+//                   | BAS |LSHFT| | SPC | NUM |
       bindings = <
-&none    &kp BSLH  &kp PRCNT &kp DLLR  &none &none &kp CARET &kp LBRC &kp RBRC &none
-&kp STAR &kp LPAR  &kp RPAR  &kp COLON &none &none &kp DQT   &kp LBKT &kp RBKT &kp SEMI
-&mo FUN  &kp GRAVE &kp AT     &kp AMPS  &none &none &kp HASH  &kp LT   &kp GT   &kp DEL
-&trans &kp SPACE &kp RET &kp ESC
+&kp EXCL &kp AT &kp HASH  &kp DOLLAR &kp PRCT  &kp CARET &kp AMPS  &kp STAR &kp MINUS &kp EQUAL
+&none    &none  &kp TILDE &kp APOS   &kp GRAVE &kp PIPE  &kp LBKT  &kp LBRC &kp RBRC  &kp RBKT
+&to FUN  &none  &none     &kp QUOT   &none     &kp BSLH  &kp SLASH &kp LPAR &kp RPAR  &none
+&to BAS &kp LSHFT &kp SPACE &to NUM
       >;
     };
 
