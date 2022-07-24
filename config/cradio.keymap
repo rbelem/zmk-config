@@ -95,15 +95,15 @@
 
     nav_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |     | |     |     |     |     |     |
-// |     |     |     |     |     | | LFT | DWN | U P |RIGHT|_NAV_|
+// |     |     |     |     |     | | BCK |P TAB|N TAB| FWD |     |
+// |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
 // |     |     |     |     |     | | HOM |PG_DN|PG_UP| END |     |
-//                   |     | SPC | | RET |_NUM_|
+//                   | BAS |LSHFT| | SPC | SYM |
       bindings = <
-&none &none &none &none &none &none    &none     &none     &none     &none
-&none &none &none &none &none &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans
-&none &none &none &none &none &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
-&none &trans &trans &trans
+&none &none &none &none &none &kp LC(LBKT) &kp LC(LS(TAB)) &kp LC(TAB) &kp LC(RBKT) &none
+&none &none &none &none &none &kp LEFT     &kp DOWN        &kp UP      &kp RIGHT    &none
+&none &none &none &none &none &kp HOME     &kp PG_DN       &kp PG_UP   &kp END      &none
+&to BAS &kp LSHFT &kp SPACE &to SYM
       >;
     };
 
