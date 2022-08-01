@@ -39,12 +39,12 @@ COMBO(lsuper, &sk LGUI, 10 11)
 
 COMBO(esc, &kp ESC, 1 2)
 COMBO(ctrl, &sk LCTL, 11 12)
-COMBO(tab, &kp TAB, 21 22)
 
 COMBO(lctrl_lgui, &sk LC(LGUI), 10 11 12)
 COMBO(lctrl_lalt, &sk LC(LALT), 11 12 13)
 
 COMBO(lalt, &sk LALT, 12 13)
+COMBO(tab, &kp TAB, 22 23)
 
 COMBO(insert, &kp INS, 5 6)
 
