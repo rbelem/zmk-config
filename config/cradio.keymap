@@ -71,12 +71,12 @@
 // -----------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  | |  ^  |  &  |  *  |  -  |  =  |
 // |  \  |  [  |  {  |  }  |  ]  | |  (  |  )  |     |  `  |  ~  |
-// | FUN |     |     |     |     | |     |     |     |     |  /  |
+// |     |     |     |     |     | |     |     |     |     |  /  |
 //                   | BAS |LSHFT| | SPC | NAV |
       bindings = <
 &kp EXCL &kp AT   &kp HASH &kp DOLLAR &kp PRCT &kp CARET &kp AMPS &kp STAR  &kp MINUS &kp EQUAL
 &kp BSLH &kp LBKT &kp LBRC &kp RBRC   &kp RBKT &kp LPAR  &kp RPAR &none     &kp GRAVE &kp TILDE
-&to FUN  &none    &none    &none      &none    &none     &none    &none     &none     &kp SLASH
+&none    &none    &none    &none      &none    &none     &none    &none     &none     &kp SLASH
 &to BAS &kp LSHFT &kp SPACE &to NAV
       >;
     };

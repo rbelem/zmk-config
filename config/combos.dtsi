@@ -60,4 +60,5 @@ COMBO_LONG(capsword, &caps_word, 14 15)
 COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 0 9)
 LAYER_COMBO(lock, &tog LCK, 20 29 30 33, NORMAL_LAYERS LOCK_LAYER)
 
+COMBO(function, &to FUN, 30 31)
 COMBO(mouse, &to MOS, 32 33)
