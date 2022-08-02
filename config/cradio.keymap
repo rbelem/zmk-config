@@ -24,6 +24,10 @@
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
 };
 
+&mt {
+  tapping-term-ms = <300>;
+};
+
 / {
   combos {
     #include "combos.dtsi"
