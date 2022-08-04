@@ -3,7 +3,6 @@
 compatible = "zmk,combos";
 #define LONG_TIMEOUT_MS 100
 #define NORMAL_LAYERS 0 1 2 3 4 5 6
-#define LOCK_LAYER 7
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -69,4 +68,3 @@ COMBO(mouse, &to MOS, 32 33)
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
 COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 0 9)
-LAYER_COMBO(lock, &tog LCK, 20 29 30 33, NORMAL_LAYERS LOCK_LAYER)
