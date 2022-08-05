@@ -40,15 +40,7 @@
       bindings = <&kp>;
       release-after-ms = <1000>;
       quick-release;
-    };
-    mo_to: behavior_mo_to {
-      compatible = "zmk,behavior-hold-tap";
-      label = "mo_to";
-      #binding-cells = <2>;
-      flavor = "hold-preferred";
-      tapping-term-ms = <200>;
-      bindings = <&to>, <&mo>;
-    };
+     };
   };
 };
 
@@ -74,7 +66,7 @@
 &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O   &kp P
 &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp QUOT
 &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp SEMI
-&mo_to SYM BAS &mt LSHFT SPACE &mt RSHFT SPACE &to NAV
+&to SYM &mt LSHFT SPACE &mt RSHFT SPACE &to NAV
       >;
     };
 
@@ -88,7 +80,7 @@
 &kp EXCL &kp AT   &kp HASH &kp DOLLAR &kp PRCT &kp CARET &kp AMPS &kp STAR &kp MINUS &kp EQUAL
 &kp BSLH &kp LBKT &kp LBRC &kp RBRC   &kp RBKT &none     &kp LPAR &kp RPAR &kp GRAVE &kp TILDE
 &none    &none    &none    &none      &none    &none     &none    &none    &none     &kp SLASH
-&trans &mt LSHFT SPACE &mt RSHFT SPACE &to NAV
+&to BAS &mt LSHFT SPACE &mt RSHFT SPACE &to NAV
       >;
     };
 
