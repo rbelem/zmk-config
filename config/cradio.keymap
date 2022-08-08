@@ -80,20 +80,20 @@
 &kp EXCL &kp AT   &kp HASH &kp DOLLAR &kp PRCT &kp CARET &kp AMPS &kp STAR &kp MINUS &kp EQUAL
 &kp BSLH &kp LBKT &kp LBRC &kp RBRC   &kp RBKT &none     &kp LPAR &kp RPAR &kp GRAVE &kp TILDE
 &none    &none    &none    &none      &none    &none     &none    &none    &none     &kp SLASH
-&to BAS &sk LSHFT &mt RSHFT SPACE &to NAV
+&to BAS &sk LSHFT &mt RSHFT SPACE &to NA
       >;
     };
 
     number_layer {
 // -----------------------------------------------------------------
-// |     |     |  *  |  /  |     | |     |  1  |  2  |  3  |     |
-// |     |     |  +  |  -  |     | |  .  |  4  |  5  |  6  |  0  |
+// |     |     |  /  |  *  |     | |     |  1  |  2  |  3  |     |
+// |     |     |  -  |  +  |     | |  .  |  4  |  5  |  6  |  0  |
 // |     |     |  %  |  =  |     | |  ~  |  7  |  8  |  9  |     |
-//                   | BAS |LSHFT| | SPC | NAV |
+//                   | BAS |LSHFT| | SPC | NA |
       bindings = <
-&none &none &kp STAR &kp SLASH &none &none     &kp N1 &kp N2 &kp N3 &none
-&none &none &kp PLUS &kp MINUS &none &kp DOT   &kp N4 &kp N5 &kp N6 &kp N0
-&none &none &kp PRCT &kp EQUAL &none &kp TILDE &kp N7 &kp N8 &kp N9 &none
+&none &none &kp SLASH &kp STAR  &none &none     &kp N1 &kp N2 &kp N3 &none
+&none &none &kp MINUS &kp PLUS  &none &kp DOT   &kp N4 &kp N5 &kp N6 &kp N0
+&none &none &kp PRCT  &kp EQUAL &none &kp TILDE &kp N7 &kp N8 &kp N9 &none
 &to BAS &mt LSHFT SPACE &mt RSHFT SPACE &to NAV
       >;
     };
