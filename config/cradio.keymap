@@ -80,7 +80,7 @@
 &kp EXCL &kp AT   &kp HASH &kp DOLLAR &kp PRCT &kp CARET &kp AMPS &kp STAR &kp MINUS &kp EQUAL
 &kp BSLH &kp LBKT &kp LBRC &kp RBRC   &kp RBKT &none     &kp LPAR &kp RPAR &kp GRAVE &kp TILDE
 &none    &none    &none    &none      &none    &none     &none    &none    &none     &kp SLASH
-&to BAS &mt LSHFT SPACE &mt RSHFT SPACE &to NAV
+&to BAS &sk LSHFT &mt RSHFT SPACE &to NAV
       >;
     };
 
