@@ -100,14 +100,14 @@
 
     nav_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |     | | BCK |P TAB|N TAB| FWD |     |
+// |     |     |     |     |     | | PRV | STP | P P | NXT |     |
 // |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
 // |     |     |     |     |     | | HOM |PG_DN|PG_UP| END |     |
 //                   | BAS |LSHFT| | SPC | NUM |
       bindings = <
-&none &none &none &none &none &kp LC(LBKT) &kp LC(LS(TAB)) &kp LC(TAB) &kp LC(RBKT) &none
-&none &none &none &none &none &kp LEFT     &kp DOWN        &kp UP      &kp RIGHT    &none
-&none &none &none &none &none &kp HOME     &kp PG_DN       &kp PG_UP   &kp END      &none
+&none &none &none &none &none &kp C_PREV &kp C_STOP &kp C_PP  &kp C_NEXT &none
+&none &none &none &none &none &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &none
+&none &none &none &none &none &kp HOME   &kp PG_DN  &kp PG_UP &kp END    &none
 &to BAS &mt LSHFT SPACE &mt RSHFT SPACE &to NUM
       >;
     };
