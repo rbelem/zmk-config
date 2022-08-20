@@ -63,7 +63,8 @@ COMBO(ralt, &sk RALT, 16 17)
 COMBO(backspace, &kp BSPC, 7 8)
 COMBO(return, &kp RET, 17 18)
 
-COMBO(mouse, &to MOS, 32 33)
+COMBO(mouse, &tog NAV, 9 33)
+COMBO(mouse, &tog MOS, 29 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
