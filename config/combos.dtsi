@@ -45,11 +45,6 @@ COMBO(lalt, &sk LALT, 12 13)
 
 COMBO(rsuper, &sk RGUI, 13 14)
 
-COMBO(q, &kp Q, 1 3)
-COMBO(z, &kp Z, 21 23)
-
-COMBO(function, &to FUN, 30 31)
-
 COMBO(lctrl_lgui, &sk LC(LGUI), 10 11 12)
 COMBO(lctrl_lalt, &sk LC(LALT), 11 12 13)
 COMBO(rgui_lalt, &sk RG(LALT), 12 13 14)
@@ -62,9 +57,6 @@ COMBO(ralt, &sk RALT, 16 17)
 
 COMBO(backspace, &kp BSPC, 7 8)
 COMBO(return, &kp RET, 17 18)
-
-COMBO(mouse, &tog NAV, 9 33)
-COMBO(mouse, &tog MOS, 29 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
