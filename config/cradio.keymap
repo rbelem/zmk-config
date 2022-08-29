@@ -17,6 +17,8 @@
 #define BR_SEMI SLASH
 #define BR_LBKT RBKT
 #define BR_RBKT BSLH
+#define BR_SLASH (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL1))
+#define BR_BSLH NON_US_BSLH
 
 #define BAS 0
 #define NUM 1
@@ -79,7 +81,7 @@
     number_layer {
 // -----------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  | |  6  |  7  |  8  |  9  |  0  |
-// |     |     |     |     |     | |     |  -  |  =  |     |  '  |
+// |     |     |     |     |     | |     |  -  |  =  |  '  |  '  |
 // |     |     |     |     |     | |     |  [  |  ]  |  \  |  /  |
 //                   |_NUM_|LSHFT| | RET |B SPC|
       bindings = <
