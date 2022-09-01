@@ -123,9 +123,9 @@
 // |     |     |     |     |     | |     |  [  |  ]  |  \  |  /  |
 //                   |     |LSHFT| |     |     |
       bindings = <
-AS(N1) AS(N2) AS(N3) AS(N4) AS(N5) AS(N6) AS(N7)      AS(N8)      AS(N9)       AS(N0)
-&none  &none  &none  &none  &none  &none  AS(MINUS)   AS(EQUAL)   AS(BR_GRAVE) AS(BR_QUOTE)
-&none  &none  &none  &none  &none  &none  AS(BR_LBKT) AS(BR_RBKT) AS(BR_BSLH)  AS(BR_SLASH)
+&kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7      &kp N8      &kp N9       &kp N0
+&none  &none  &none  &none  &none  &none  &kp MINUS   &kp EQUAL   &kp BR_GRAVE &kp BR_QUOTE
+&none  &none  &none  &none  &none  &none  &kp BR_LBKT &kp BR_RBKT &kp BR_BSLH  &kp BR_SLASH
 &sl LMD &lt LSHFT SPACE &lt RALT LCTL &sl RMD
       >;
     };
