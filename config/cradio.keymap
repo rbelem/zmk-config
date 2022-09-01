@@ -26,10 +26,11 @@
 #define LMD 1
 #define RMD 2
 #define NUM 3
-#define NAV 4
-#define MOS 5
-#define FUN 6
-#define DAN 7
+#define SYM 4
+#define NAV 5
+#define MOS 6
+#define FUN 7
+#define DAN 8
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -37,6 +38,10 @@
 
 &mt {
   tapping-term-ms = <300>;
+};
+
+&sl {
+  release-after-ms = <3000>;
 };
 
 / {
@@ -49,7 +54,7 @@
       compatible = "zmk,behavior-hold-tap";
       label = "AUTO_SHIFT";
       #binding-cells = <2>;
-      tapping_term_ms = <300>;
+      tapping_term_ms = <135>;
       quick_tap_ms = <0>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
@@ -85,12 +90,12 @@
 
     lmod_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |     | |     |     |     |     |     |
-// |     |     |     |     |     | |     |     |     |     |     |
+// | MOS | NAV | SYM | NUM | FUN | |     |     |     |     |     |
+// |L GUI|L ALT|L CTL|LSHFT|     | |     |     |     |     |     |
 // |     |     |     |     |     | |     |     |     |     |     |
 //                   |_LMD_|     | |     |     |
       bindings = <
-&to MOS  &to NAV  &sl NUM  &to BAS   &sl FUN &trans &trans &trans &trans &trans
+&mo MOS  &mo NAV  &sl SYM  &sl NUM   &sl FUN &trans &trans &trans &trans &trans
 &sk LGUI &sk LALT &sk LCTL &sk LSHFT &trans  &trans &trans &trans &trans &trans
 &trans   &trans   &trans   &trans    &trans  &trans &trans &trans &trans &trans
 &trans &trans &trans &trans
@@ -99,12 +104,12 @@
 
      rmod_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |     | | FUN | BAS | NUM | NAV | MOS |
+// |     |     |     |     |     | | FUN | NUM | SYM | NAV | MOS |
 // |     |     |     |     |     | |     |RSHFT|R CTL|R ALT|R GUI|
 // |     |     |     |     |     | |     |     |     |     |     |
 //                   |     |     | |     |_RMD_|
       bindings = <
-&trans &trans &trans &trans &trans &sl FUN &to BAS   &sl NUM  &to NAV  &sl MOS
+&trans &trans &trans &trans &trans &sl FUN &sl NUM   &sl SYM  &sl NAV  &sl MOS
 &trans &trans &trans &trans &trans &trans  &sk RSHFT &sk RCTL &sk RALT &sk RGUI
 &trans &trans &trans &trans &trans &trans  &trans    &trans   &trans   &trans
 &trans &trans &trans &trans
@@ -121,7 +126,21 @@
 AS(N1) AS(N2) AS(N3) AS(N4) AS(N5) AS(N6) AS(N7)      AS(N8)      AS(N9)       AS(N0)
 &none  &none  &none  &none  &none  &none  AS(MINUS)   AS(EQUAL)   AS(BR_GRAVE) AS(BR_QUOTE)
 &none  &none  &none  &none  &none  &none  AS(BR_LBKT) AS(BR_RBKT) AS(BR_BSLH)  AS(BR_SLASH)
-&trans &sk LSHFT &trans &trans
+&sl LMD &lt LSHFT SPACE &lt RALT LCTL &sl RMD
+      >;
+    };
+
+   symbol_layer {
+// -----------------------------------------------------------------
+// |  !  |  @  |  #  |  $  |  %  | |  ¨  |  &  |  *  |  (  |  )  |
+// |     |     |     |     |     | |     |  _  |  +  |  `  |  "  |
+// |     |     |     |     |     | |     |  {  |  }  |  \  |  /  |
+//                   |     |LSHFT| |     |     |
+      bindings = <
+&kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7)      &kp LS(N8)      &kp LS(N9)       &kp LS(N0)
+&none      &none      &none      &none      &none      &none      &kp LS(MINUS)   &kp LS(EQUAL)   &kp LS(BR_GRAVE) &kp LS(BR_QUOTE)
+&none      &none      &none      &none      &none      &none      &kp LS(BR_LBKT) &kp LS(BR_RBKT) &kp LS(BR_BSLH)  &kp LS(BR_SLASH)
+&sl LMD &lt LSHFT SPACE &lt RALT LCTL &sl RMD
       >;
     };
 
