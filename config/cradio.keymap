@@ -95,7 +95,7 @@
 &trans   &trans   &trans   &trans    &trans  &trans &trans &trans &trans &trans
 &trans &trans &trans &trans
       >;
-    }
+    };
 
      rmod_layer {
 // -----------------------------------------------------------------
@@ -109,7 +109,7 @@
 &trans &trans &trans &trans &trans &trans  &trans    &trans   &trans   &trans
 &trans &trans &trans &trans
       >;
-    }
+    };
 
    number_layer {
 // -----------------------------------------------------------------
