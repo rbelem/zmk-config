@@ -37,7 +37,7 @@
 };
 
 &mt {
-  tapping-term-ms = <300>;
+  tapping-term-ms = <250>;
 };
 
 &sl {
@@ -79,39 +79,39 @@
 // |  Q  |  W  |  E  |  R  |  T  | |  Y  |  U  |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  | |  H  |  J  |  K  |  L  |  ~  |
 // |  Z  |  X  |  C  |  V  |  B  | |  N  |  M  |  ,  |  .  |  ;  |
-//                   | ESC | SPC | | RET | TAB |
+//                   |-LMD-| SPC | | SPC |-RMD-|
       bindings = <
 &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O   &kp P
 &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp BR_TILDE
 &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp BR_SEMI
-&mt LSHFT ESC &lt LMD SPACE &lt RMD RET   &mt RALT TAB
+&sl LMD &mt LSHFT SPACE &lt RALT SPACE &sl RMD
       >;
     };
 
     lmod_layer {
 // -----------------------------------------------------------------
-// |     | SYM | NUM |LSHFT| NAV | |     |     |     |     |     |
-// |     |L GUI|L ALT|L CTL| MOS | |     |     |     |     |     |
-// |     |     |     |     | FUN | |     |     |     |     |     |
+// |     | NAV | SYM | NUM | MOS | |     |     |     |     |     |
+// |LSHFT|L GUI|L ALT|L CTL|     | |     |     |     |     |     |
+// | FUN |     |     |     |     | |     |     |     |     |     |
 //                   |_LMD_|     | |     |     |
       bindings = <
-&trans &sl SYM  &sl NUM  &sk LSHFT &mo NAV &trans &trans &trans &trans &trans
-&trans &sk LGUI &sk LALT &sk LCTL  &mo MOS &trans &trans &trans &trans &trans
-&trans &trans   &trans   &trans    &sl FUN &trans &trans &trans &trans &trans
+&trans    &mo NAV  &sl SYM  &sl NUM  &mo MOS &trans &trans &trans &trans &trans
+&sk LSHFT &sk LGUI &sk LALT &sk LCTL &trans  &trans &trans &trans &trans &trans
+&sl FUN   &trans   &trans   &trans   &trans  &trans &trans &trans &trans &trans
 &trans &trans &trans &trans
       >;
     };
 
      rmod_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |     | | NAV |RSHFT| NUM | SYM |     |
-// |     |     |     |     |     | | MOS |R CTL|R ALT|R GUI|     |
-// |     |     |     |     |     | | FUN |     |     |     |     |
-//                   |     |     | |_RMD_|     |
+// |     |     |     |     |     | | MOS | NUM | SYM | NAV |     |
+// |     |     |     |     |     | |     |R CTL|R ALT|R GUI|RSHFT|
+// |     |     |     |     |     | |     |     |     |     | FUN |
+//                   |     |     | |     |_RMD_|
       bindings = <
-&trans &trans &trans &trans &trans &sl NAV &sk RSHFT &sl NUM  &sl SYM  &trans
-&trans &trans &trans &trans &trans &sl MOS &sk RCTL  &sk RALT &sk RGUI &trans
-&trans &trans &trans &trans &trans &sl FUN &trans    &trans   &trans   &trans
+&trans &trans &trans &trans &trans &sl MOS &sl NUM  &sl SYM  &sl NAV  &trans
+&trans &trans &trans &trans &trans &trans  &sk RCTL &sk RALT &sk RGUI &sk RSHFT
+&trans &trans &trans &trans &trans &trans  &trans   &trans   &trans   &sl FUN
 &trans &trans &trans &trans
       >;
     };
@@ -121,12 +121,12 @@
 // |  1  |  2  |  3  |  4  |  5  | |  6  |  7  |  8  |  9  |  0  |
 // |     |     |     |     |     | |     |  -  |  =  |  `  |  '  |
 // |     |     |     |     |     | |     |  [  |  ]  |  \  |  /  |
-//                   |     |LSHFT| |     |     |
+//                   |-LMD-| SPC | | SPC |-RMD-|
       bindings = <
 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7      &kp N8      &kp N9       &kp N0
 &none  &none  &none  &none  &none  &none  &kp MINUS   &kp EQUAL   &kp BR_GRAVE &kp BR_QUOTE
 &none  &none  &none  &none  &none  &none  &kp BR_LBKT &kp BR_RBKT &kp BR_BSLH  &kp BR_SLASH
-&sl LMD &mt LSHFT SPACE &mt RALT LCTL &sl RMD
+&sl LMD &mt LSHFT SPACE &mt RALT SPACE &sl RMD
       >;
     };
 
@@ -135,12 +135,12 @@
 // |  !  |  @  |  #  |  $  |  %  | |  ¨  |  &  |  *  |  (  |  )  |
 // |     |     |     |     |     | |     |  _  |  +  |  `  |  "  |
 // |     |     |     |     |     | |     |  {  |  }  |  \  |  /  |
-//                   |     |LSHFT| |     |     |
+//                   |-LMD-| SPC | | SPC |-RMD-|
       bindings = <
 &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7)      &kp LS(N8)      &kp LS(N9)       &kp LS(N0)
 &none      &none      &none      &none      &none      &none      &kp LS(MINUS)   &kp LS(EQUAL)   &kp LS(BR_GRAVE) &kp LS(BR_QUOTE)
 &none      &none      &none      &none      &none      &none      &kp LS(BR_LBKT) &kp LS(BR_RBKT) &kp LS(BR_BSLH)  &kp LS(BR_SLASH)
-&sl LMD &mt LSHFT SPACE &mt RALT LCTL &sl RMD
+&sl LMD &mt LSHFT SPACE &mt RALT SPACE &sl RMD
       >;
     };
 
@@ -149,12 +149,12 @@
 // |     |     |     |     |     | | PRV | STP | P P | NXT |     |
 // |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
 // |     |     |     |     |     | | HOM |PG_DN|PG_UP| END |     |
-//                   | TAB | SPC | | ESC |_NAV_|
+//                   |-LMD-| SPC | | SPC |-RMD-|
       bindings = <
 &none &none &none &none &none &kp C_PREV &kp C_STOP &kp C_PP  &kp C_NEXT &none
 &none &none &none &none &none &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &none
 &none &none &none &none &none &kp HOME   &kp PG_DN  &kp PG_UP &kp END    &none
-&sl LMD &mt LSHFT SPACE &mt RALT LCTL &sl RMD
+&sl LMD &mt LSHFT SPACE &mt RALT SPACE &sl RMD
       >;
     };
 
@@ -163,12 +163,12 @@
 // |     |     |     |     |     | |SCR L|SCRDN|SCRUP|SCR R|     |
 // |     |     |     |     |     | |MOV L|MOVDN|MOVUP|MOV R|     |
 // |     |     |     |     |     | |     |LCLK |MCLK |RCLK |     |
-//                   |_NUM_|LSHFT| | ESC |_MOS_|
+//                   |-LMD-| SPC | | SPC |-RMD-|
       bindings = <
 &none &none &none &none &none &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &none
 &none &none &none &none &none &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT   &none
 &none &none &none &none &none &none            &mkp LCLK        &mkp MCLK      &mkp RCLK         &none
-&sl LMD &mt LSHFT SPACE &mt RALT LCTL &sl RMD
+&sl LMD &mt LSHFT SPACE &mt RALT SPACE &sl RMD
       >;
     };
 
@@ -177,7 +177,7 @@
 // |     | F 6 | F 5 | F 4 | F10 | |     |BRIDN|BRIUP|     | BT0 |
 // |     | F 3 | F 2 | F 1 | F11 | |VMUTE|VOLDN|VOLUP|     | BT1 |
 // |-!!!-| F 9 | F 8 | F 7 | F12 | |PREV |STOP |PLAY |NEXT | BT2 |
-//                   |_NUM_|LSHFT| | ESC |-MOS-|
+//                   |     |     | |     |     |
       bindings = <
 &none   &kp F6 &kp F5 &kp F4 &kp F10 &none      &kp C_BRI_DN &kp C_BRI_UP &none      &bt BT_SEL 0
 &none   &kp F3 &kp F2 &kp F1 &kp F11 &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &none      &bt BT_SEL 1
