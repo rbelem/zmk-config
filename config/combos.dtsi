@@ -38,30 +38,19 @@ compatible = "zmk,combos";
 COMBO(esc, &kp ESC, 1 2)
 COMBO(tab, &kp TAB, 2 3)
 
-COMBO(navigation, &mo NAV, 1 30)
-COMBO(symbols, &sl SYM, 2 30)
-COMBO(numbers, &sl NUM, 3 30)
-COMBO(mouse, &mo MOS, 4 30)
-
-COMBO(lsuper, &sk LGUI, 11 30)
-COMBO(lalt, &sk LALT, 12 30)
-COMBO(lctrl, &sk LCTL, 13 30)
-
-COMBO(lshft_lgui, &sk LS(LGUI), 10 11 30)
-COMBO(lshft_lalt, &sk LS(LALT), 10 12 30)
-COMBO(lshft_lctrl, &sk LS(LCTL), 10 13 30)
-
-COMBO(lctl_lgui, &sk LC(LGUI), 11 13 30)
-COMBO(lctl_lalt, &sk LC(LALT), 12 13 31)
+COMBO(function, MO_TOG(FUN), 24 30)
+COMBO(symbols, MO_TOG(SYM), 30 31)
 
 // Right side
 COMBO(insert, &kp INS, 5 6)
 
 COMBO(delete, &kp DEL, 6 7)
-COMBO(ralt, &sk RALT, 16 17)
 
 COMBO(backspace, &kp BSPC, 7 8)
 COMBO(return, &kp RET, 17 18)
+
+COMBO(navigation, MO_TOG(NAV), 25 33)
+COMBO(numbers, MO_TOG(NUM), 32 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
