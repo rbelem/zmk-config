@@ -38,6 +38,7 @@ compatible = "zmk,combos";
 COMBO(esc, &kp ESC, 1 2)
 COMBO(tab, &kp TAB, 2 3)
 
+COMBO(base, &to BAS, 4 24)
 COMBO(symbols, &tog(SYM), 20 30)
 COMBO(function, MO_TOG(FUN), 24 30)
 
@@ -53,6 +54,5 @@ COMBO(navigation, &tog NAV, 29 32)
 COMBO(numbers, &tog NUM, 29 33)
 
 // Both sides
-COMBO_LONG(base, &to BAS, 4 5 24 25)
 COMBO_LONG(capsword, &caps_word, 14 15)
 COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 20 29 30 33)
