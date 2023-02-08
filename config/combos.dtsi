@@ -53,5 +53,6 @@ COMBO(navigation, MO_TOG(NAV), 25 33)
 COMBO(numbers, MO_TOG(NUM), 32 33)
 
 // Both sides
+COMBO_LONG(base, &to BAS, 4 5 24 25)
 COMBO_LONG(capsword, &caps_word, 14 15)
 COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 20 29 30 33)
