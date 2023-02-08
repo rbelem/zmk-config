@@ -76,6 +76,14 @@
       tapping-term-ms = <200>;
       bindings = <&kp>, <&sk>;
     };
+    kp_sl: keypress_stickylayer {
+      compatible = "zmk,behavior-hold-tap";
+      label = "kp_sl";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&sl>;
+    };
   };
 };
 
@@ -101,7 +109,7 @@
 &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O   &kp P
 &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp BR_TILDE
 &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp BR_SEMI
-&mt LCTL ESC &mt LSHFT SPACE &mt LALT RET &kp_sk LGUI RALT
+&kp_sl LCTL SYM &mt LSHFT SPACE &kp_sl LGUI NUM &kp_sk LALT RALT
       >;
     };
 
