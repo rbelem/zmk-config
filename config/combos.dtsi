@@ -55,4 +55,4 @@ COMBO(numbers, &tog NUM, 29 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
-COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 20 29 30 33)
+COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 5 25)
