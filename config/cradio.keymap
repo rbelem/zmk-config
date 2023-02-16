@@ -143,14 +143,14 @@
 
     nav_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |     | | PRV | STP | P P | NXT |     |
+// |BRIDN|BRIUP|VOLDN|VOLUP|VMUTE| | PRV | STP | P P | NXT |     |
 // |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
 // |     |     |     |     |     | | HOM |PG_DN|PG_UP| END |     |
 //                   |-LMD-| SPC | | SPC |-RMD-|
       bindings = <
-&none &none &none &none &none &kp C_PREV &kp C_STOP &kp C_PP  &kp C_NEXT &none
-&none &none &none &none &none &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &none
-&none &none &none &none &none &kp HOME   &kp PG_DN  &kp PG_UP &kp END    &none
+&kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE &kp C_PREV &kp C_STOP &kp C_PP  &kp C_NEXT &none
+&none        &none        &none        &none        &none      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &none
+&none        &none        &none        &none        &none      &kp HOME   &kp PG_DN  &kp PG_UP &kp END    &none
 &trans &trans &trans &trans
       >;
     };
@@ -171,14 +171,14 @@
 
     fun_layer {
 // -----------------------------------------------------------------
-// |     | F 6 | F 5 | F 4 | F10 | |     |BRIDN|BRIUP|     | BT0 |
-// |     | F 3 | F 2 | F 1 | F11 | |VMUTE|VOLDN|VOLUP|     | BT1 |
-// |-!!!-| F 9 | F 8 | F 7 | F12 | |PREV |STOP |PLAY |NEXT | BT2 |
+// | F 1 | F 2 | F 3 | F 4 | F 5 | | F 6 | F 7 | F 8 | F 9 | F10 |
+// |     |     |     |     |     | |     | BT0 | BT1 | BT2 | F11 |
+// |-!!!-|     |     |     |     | |     |     |     |     | F12 |
 //                   |     |     | |     |     |
       bindings = <
-&none   &kp F6 &kp F5 &kp F4 &kp F10 &none      &kp C_BRI_DN &kp C_BRI_UP &none      &bt BT_SEL 0
-&none   &kp F3 &kp F2 &kp F1 &kp F11 &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &none      &bt BT_SEL 1
-&mo DAN &kp F9 &kp F8 &kp F7 &kp F12 &kp C_PREV &kp C_STOP   &kp C_PP     &kp C_NEXT &bt BT_SEL 2
+&kp F1  &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7       &kp F8       &kp F9       &kp F10
+&none   &none  &none  &none  &none  &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp F11
+&mo DAN &none  &none  &none  &none  &none  &none        &none        &none        &kp F12
 &trans &trans &trans &trans
       >;
     };
