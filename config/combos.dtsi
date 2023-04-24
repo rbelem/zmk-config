@@ -40,7 +40,7 @@ COMBO(tab, &kp TAB, 2 3)
 
 COMBO(base, &to BAS, 4 24)
 COMBO(symbols, &tog SYM, 20 30)
-COMBO(navigation, MO_TOG(NAV), 24 30)
+COMBO(navigation, &mo NAV, 24 30)
 
 // Right side
 COMBO(insert, &kp INS, 5 6)
@@ -51,7 +51,7 @@ COMBO(backspace, &kp BSPC, 7 8)
 COMBO(return, &kp RET, 17 18)
 
 COMBO(numbers, &tog NUM, 29 32)
-COMBO(function, &tog FUN, 29 33)
+COMBO(function, &mo FUN, 25 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
