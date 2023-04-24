@@ -149,7 +149,7 @@
 //                   |-LMD-| SPC | | SPC |-RMD-|
       bindings = <
 &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE &kp C_PREV &kp C_STOP &kp C_PP  &kp C_NEXT &none
-&none        &none        &none        &none        &none      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &none
+&kp LSHFT    &kp LCTL     &kp LGUI     &kp LALT     &none      &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &none
 &none        &none        &none        &none        &none      &kp HOME   &kp PG_DN  &kp PG_UP &kp END    &none
 &trans &trans &trans &trans
       >;
