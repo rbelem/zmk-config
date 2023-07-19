@@ -54,6 +54,8 @@ COMBO(return, &kp RET, 17 18)
 COMBO(numpad, &tog NPD, 5 32)
 COMBO(numbers, &tog NUM, 9 32)
 
+COMBO(printscreen, &kp PSCRN, 15 25)
+
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
 COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 5 25)
