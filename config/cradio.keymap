@@ -27,11 +27,12 @@
 
 #define BAS 0
 #define NUM 1
-#define SYM 2
-#define NAV 3
-#define MOS 4
-#define FUN 5
-#define DAN 6
+#define NPD 2
+#define SYM 3
+#define NAV 4
+#define MOS 5
+#define FUN 6
+#define DAN 7
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -123,6 +124,20 @@
 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6      &kp N7      &kp N8    &kp N9       &kp N0
 &none  &none  &none  &none  &none  &kp BR_LBKT &kp MINUS   &kp EQUAL &kp BR_GRAVE &kp BR_QUOTE
 &none  &none  &none  &none  &none  &kp BR_RBKT &kp BR_BSLH &kp COMMA &kp DOT      &kp BR_SLASH
+&trans &trans &trans &trans
+      >;
+    };
+
+    numpad_layer {
+// -----------------------------------------------------------------
+// |     |     |  /  |  *  |     | |     |  1  |  2  |  3  |     |
+// |     |     |  -  |  +  |     | |  .  |  4  |  5  |  6  |  0  |
+// |     |     |  %  |  =  |     | |  ~  |  7  |  8  |  9  |     |
+//                   |-LMD-| SPC | | SPC |-RMD-|
+      bindings = <
+&none &none &kp SLASH &kp STAR  &none &none     &kp N1 &kp N2 &kp N3 &none
+&none &none &kp MINUS &kp PLUS  &none &kp DOT   &kp N4 &kp N5 &kp N6 &kp N0
+&none &none &kp PRCT  &kp EQUAL &none &kp TILDE &kp N7 &kp N8 &kp N9 &none
 &trans &trans &trans &trans
       >;
     };
