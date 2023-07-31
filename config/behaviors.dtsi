@@ -1,0 +1,35 @@
+
+
+as: auto_shift {
+  compatible = "zmk,behavior-hold-tap";
+  label = "AUTO_SHIFT";
+  #binding-cells = <2>;
+  tapping_term_ms = <135>;
+  quick_tap_ms = <0>;
+  flavor = "tap-preferred";
+  bindings = <&kp>, <&kp>;
+};
+mo_tog: behavior_mo_tog {
+  compatible = "zmk,behavior-hold-tap";
+  label = "mo_tog";
+  #binding-cells = <2>;
+  flavor = "hold-preferred";
+  tapping-term-ms = <200>;
+  bindings = <&mo>, <&tog>;
+};
+kp_sk: keypress_stickykey {
+  compatible = "zmk,behavior-hold-tap";
+  label = "kp_sk";
+  #binding-cells = <2>;
+  flavor = "hold-preferred";
+  tapping-term-ms = <200>;
+  bindings = <&kp>, <&sk>;
+};
+kp_sl: keypress_stickylayer {
+  compatible = "zmk,behavior-hold-tap";
+  label = "kp_sl";
+  #binding-cells = <2>;
+  flavor = "hold-preferred";
+  tapping-term-ms = <200>;
+  bindings = <&kp>, <&sl>;
+};
