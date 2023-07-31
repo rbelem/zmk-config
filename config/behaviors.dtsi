@@ -1,4 +1,4 @@
-
+#define TD_TAPPING_MS 1000
 as: auto_shift {
   compatible = "zmk,behavior-hold-tap";
   label = "AUTO_SHIFT";
@@ -36,13 +36,13 @@ left_kp_sl_to: left_kp_sl_to { \
     compatible = "zmk,behavior-tap-dance";
     label = "left_kp_sl_to";
     #binding-cells = <0>;
-    tapping-term-ms = <225>;
+    tapping-term-ms = <TD_TAPPING_MS>;
     bindings = <&kp LCTL>, <&sl SYM>, <&to SYM>;
 };
 right_kp_sl_to: right_kp_sl_to { \
     compatible = "zmk,behavior-tap-dance";
     label = "right_kp_sl_to";
     #binding-cells = <0>;
-    tapping-term-ms = <225>;
+    tapping-term-ms = <TD_TAPPING_MS>;
     bindings = <&kp LGUI>, <&sl NUM>, <&to NUM>;
 };
