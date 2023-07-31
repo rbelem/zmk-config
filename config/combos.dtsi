@@ -3,8 +3,6 @@
 compatible = "zmk,combos";
 #define LONG_TIMEOUT_MS 100
 #define NORMAL_LAYERS 0 1 2 3 4 5 6 7
-// TODO: Move all the defines to a header file
-#define MOS 5
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
