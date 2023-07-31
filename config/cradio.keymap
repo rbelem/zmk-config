@@ -33,7 +33,7 @@
 #define NAV 4
 #define MOS 5
 #define FUN 6
-#define DAN 7
+#define MNT 7
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -167,18 +167,18 @@
       >;
     };
 
-    danger_layer {
+    maint_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |     | |BTCLR| BLE | USB |RESET|     |
-// |     |     |     |     |     | |     |     |     |     |BOOTL|
-// |_!!!_|     |     |     |     | |     |     |     |     |_FUN_|
-//                   |     |     | |     |     |
+// |     |     |     |     |BTCLR| |     | BT0 | BT1 | BT2 |     |
+// |     |     |     |     | BLE | |RESET|     |     |     |     |
+// |     |     |     |     | USB | |BOOTL|     |     |     |     |
+//                   |LCTL | SPC | |LGUI |LALT |
       // impactful buttons
       // Bluetooth clear, reset, chaning BLE/USB preference, bootloader
       bindings = <
-&none  &none &none &none &none &bt BT_CLR  &out OUT_BLE &out OUT_USB &reset &none
-&none  &none &none &none &none &none &none &none &none &bootloader
-&trans &none &none &none &none &none &none &none &none &none
+&none  &none &none &none &bt BT_CLR   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none
+&none  &none &none &none &out OUT_BLE &reset      &none        &none        &none        &none
+&none  &none &none &none &out OUT_USB &bootloader &none        &none        &none        &none
 &none &none &none &none
       >;
     };
