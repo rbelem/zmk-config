@@ -155,14 +155,14 @@
 
     fun_layer {
 // -----------------------------------------------------------------
-// |LSHFT|LGUI |LALT |LCTL |     | | BT0 | F 1 | F 2 | F 3 | F10 |
-// |     |     |     |     |     | | BT1 | F 4 | F 5 | F 6 | F11 |
-// |-!!!-|     |     |     |     | | BT2 | F 7 | F 8 | F 9 | F12 |
+// |LSHFT|LGUI |LALT |LCTL |     | | F10 | F 1 | F 2 | F 3 |     |
+// |     |     |     |     |     | | F11 | F 4 | F 5 | F 6 |     |
+// |     |     |     |     |     | | F12 | F 7 | F 8 | F 9 |     |
 //                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
-&kp LSHFT &kp LGUI &kp LALT &kp LCTL &none &bt BT_SEL 0 &kp F1 &kp F2 &kp F3 &kp F10
-&none     &none    &none    &none    &none &bt BT_SEL 1 &kp F4 &kp F5 &kp F6 &kp F11
-&mo DAN   &none    &none    &none    &none &bt BT_SEL 2 &kp F7 &kp F8 &kp F9 &kp F12
+&kp LSHFT &kp LGUI &kp LALT &kp LCTL &none &kp F10 &kp F1 &kp F2 &kp F3 &none
+&none     &none    &none    &none    &none &kp F11 &kp F4 &kp F5 &kp F6 &none
+&none     &none    &none    &none    &none &kp F12 &kp F7 &kp F8 &kp F9 &none
 &trans &trans &trans &trans
       >;
     };
