@@ -53,7 +53,6 @@ COMBO(return, &kp RET, 17 18)
 
 COMBO(numpad, &tog NPD, 5 32)
 
-COMBO(lockscreen, &kp PAUSE_BREAK, 5 25)
 COMBO(printscreen, &kp PSCRN, 15 25)
 
 COMBO(mouse, &tog MOS, 5 32)
@@ -61,3 +60,4 @@ LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
+COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 24 25)
