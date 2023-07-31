@@ -51,9 +51,9 @@ COMBO(delete, &kp DEL, 6 7)
 COMBO(backspace, &kp BSPC, 7 8)
 COMBO(return, &kp RET, 17 18)
 
-COMBO(numpad, &tog NPD, 5 32)
 COMBO(printscreen, &kp PSCRN, 5 25)
 
+COMBO(numpad, &tog NPD, 9 32)
 
 COMBO(mouse, &tog MOS, 5 32)
 LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
