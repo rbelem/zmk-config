@@ -24,6 +24,7 @@
 // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap
 // to a specific layer
 #define MO_TOG(layer) &mo_tog layer layer
+#define KP_SL_TO(key, layer) &kp_sl_to key layer layer
 
 #define BAS 0
 #define NUM 1
@@ -73,12 +74,12 @@
 // |  Q  |  W  |  E  |  R  |  T  | |  Y  |  U  |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  | |  H  |  J  |  K  |  L  |  ~  |
 // |  Z  |  X  |  C  |  V  |  B  | |  N  |  M  |  ,  |  .  |  ;  |
-//                   |-LMD-| SPC | | SPC |-RMD-|
+//                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
 &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O   &kp P
 &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp BR_TILDE
 &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp BR_SEMI
-&kp_sl LCTL SYM &mt LSHFT SPACE &kp_sl LGUI NUM &kp_sk LALT RALT
+&left_kp_sl_to &mt LSHFT SPACE &right_kp_sl_to &kp_sk LALT RALT
       >;
     };
 
@@ -87,7 +88,7 @@
 // |  1  |  2  |  3  |  4  |  5  | |  6  |  7  |  8  |  9  |  0  |
 // |     |     |     |     |     | |  [  |  -  |  =  |  `  |  '  |
 // |     |     |     |     |     | |  ]  |  \  |  ,  |  .  |  /  |
-//                   |-LMD-| SPC | | SPC |-RMD-|
+//                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6      &kp N7      &kp N8    &kp N9       &kp N0
 &none  &none  &none  &none  &none  &kp BR_LBKT &kp MINUS   &kp EQUAL &kp BR_GRAVE &kp BR_QUOTE
@@ -101,7 +102,7 @@
 // |     |     |  /  |  *  |     | |     |  1  |  2  |  3  |     |
 // |     |     |  -  |  +  |     | |  .  |  4  |  5  |  6  |  0  |
 // |     |     |  %  |  =  |     | |  ~  |  7  |  8  |  9  |     |
-//                   |-LMD-| SPC | | SPC |-RMD-|
+//                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
 &none &none &kp SLASH &kp STAR  &none &none     &kp N1 &kp N2 &kp N3 &none
 &none &none &kp MINUS &kp PLUS  &none &kp DOT   &kp N4 &kp N5 &kp N6 &kp N0
@@ -115,7 +116,7 @@
 // |  !  |  @  |  #  |  $  |  %  | |  ¨  |  &  |  *  |  (  |  )  |
 // |     |     |     |     |     | |  {  |  _  |  +  |  `  |  "  |
 // |     |     |     |     |     | |  }  |  |  |  <  |  >  |  ?  |
-//                   |-LMD-| SPC | | SPC |-RMD-|
+//                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
 &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6)      &kp LS(N7)      &kp LS(N8)    &kp LS(N9)       &kp LS(N0)
 &none      &none      &none      &none      &none      &kp LS(BR_LBKT) &kp LS(MINUS)   &kp LS(EQUAL) &kp LS(BR_GRAVE) &kp LS(BR_QUOTE)
@@ -129,7 +130,7 @@
 // |LSHFT|LGUI |LALT |LCTL |     | | HOM |PG_DN|PG_UP| END |     |
 // |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
 // |     |     |     |     |     | |     |     |     |     |     |
-//                   |-LMD-| SPC | | SPC |-RMD-|
+//                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
 &kp LSHFT &kp LGUI &kp LALT &kp LCTL &none &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
 &none     &none    &none    &none    &none &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
@@ -157,7 +158,7 @@
 // |LSHFT|LGUI |LALT |LCTL |     | | BT0 | F 1 | F 2 | F 3 | F10 |
 // |     |     |     |     |     | | BT1 | F 4 | F 5 | F 6 | F11 |
 // |-!!!-|     |     |     |     | | BT2 | F 7 | F 8 | F 9 | F12 |
-//                   |     |     | |     |     |
+//                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
 &kp LSHFT &kp LGUI &kp LALT &kp LCTL &none &bt BT_SEL 0 &kp F1 &kp F2 &kp F3 &kp F10
 &none     &none    &none    &none    &none &bt BT_SEL 1 &kp F4 &kp F5 &kp F6 &kp F11
