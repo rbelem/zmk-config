@@ -79,7 +79,7 @@
 &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O   &kp P
 &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp BR_TILDE
 &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp BR_SEMI
-&kp_sl LCTL SYM &mt LSHFT SPACE &kp_sl LGUI NUM &kp_sk LALT RA(RCTL)
+&kp_sl LCTL SYM &mt LSHFT SPACE &kp_sl LGUI NUM &mt LALT LS(RALT)
       >;
     };
 
