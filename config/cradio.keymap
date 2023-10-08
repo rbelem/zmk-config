@@ -169,16 +169,16 @@
 
     maint_layer {
 // -----------------------------------------------------------------
-// |     |     |     |     |BTCLR| |     | BT0 | BT1 | BT2 |     |
-// |     |     |     |     | BLE | |RESET|     |     |     |     |
-// |     |     |     |     | USB | |BOOTL|     |     |     |     |
-//                   |LCTL | SPC | |LGUI |LALT |
+// |     | BT2 | BT1 | BT0 | BLE | |     |     |     |     |     |
+// |     |BTCLR|BOOTL|RESET| USB | |     |     |     |     |     |
+// |     |     |     |     |     | |     |     |     |     |     |
+//                   |     |     | |     |     |
       // impactful buttons
       // Bluetooth clear, reset, chaning BLE/USB preference, bootloader
       bindings = <
-&none  &none &none &none &bt BT_CLR   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none
-&none  &none &none &none &out OUT_BLE &reset      &none        &none        &none        &none
-&none  &none &none &none &out OUT_USB &bootloader &none        &none        &none        &none
+&none  &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &out OUT_BLE &none &none &none &none &none
+&none  &bt BT_CLR   &bootloader  &reset       &out OUT_USB &none &none &none &none &none
+&none  &none        &none        &none        &none &none  &none &none &none &none
 &none &none &none &none
       >;
     };
