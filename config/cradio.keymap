@@ -121,7 +121,7 @@
 &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6)      &kp LS(N7)      &kp LS(N8)    &kp LS(N9)       &kp LS(N0)
 &none      &none      &none      &none      &none      &kp LS(BR_LBKT) &kp LS(MINUS)   &kp LS(EQUAL) &kp LS(BR_GRAVE) &kp LS(BR_QUOTE)
 &none      &none      &none      &none      &none      &kp LS(BR_RBKT) &kp LS(BR_BSLH) &kp LS(COMMA) &kp LS(DOT)      &kp LS(BR_SLASH)
-&sk LCTL &trans &sk LGUI &sk LALT
+&kp RCTL &trans &sk LGUI &sk LALT
       >;
     };
 
