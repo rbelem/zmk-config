@@ -2,7 +2,7 @@
 
 compatible = "zmk,combos";
 #define LONG_TIMEOUT_MS 100
-#define NORMAL_LAYERS 0 1 2 3 4 5 6 7
+#define NORMAL_LAYERS 0 1 2 3 4 5 6 7 8
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -59,10 +59,11 @@ COMBO(return, &kp RET, 17 18)
 
 COMBO(printscreen, &kp PSCRN, 5 25)
 
-COMBO(numpad, &tog NPD, 9 32)
-
 COMBO(mouse, &tog MOS, 5 32)
 LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
+
+COMBO(numpad, &tog NPD, 9 32)
+COMBO(multimedia, &tog MUL, 29 32)
 
 COMBO(rctl, &sk RCTL, 6 33)
 COMBO(ralt, &sk RALT, 7 33)
