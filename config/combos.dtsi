@@ -54,11 +54,13 @@ COMBO(return, &kp RET, 17 18)
 COMBO(printscreen, &kp PSCRN, 5 25)
 
 COMBO(rnav, &tog NAV, 5 15)
-COMBO(mouse, &tog MOS, 15 25)
 COMBO(numpad, &tog NPD, 9 19)
 COMBO(multimedia, &tog MUL, 19 29)
 
+#if IS_ENABLED(CONFIG_ZMK_MOUSE)
+COMBO(mouse, &tog MOS, 15 25)
 LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
+#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
