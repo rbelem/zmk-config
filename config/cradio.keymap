@@ -1,8 +1,5 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MIT
 
 
 #include <behaviors.dtsi>
@@ -49,12 +46,19 @@
 };
 
 / {
-  combos {
-    #include "combos.dtsi"
+  behaviors {
+    kp_sl: keypress_stickylayer {
+      compatible = "zmk,behavior-hold-tap";
+      label = "kp_sl";
+      #binding-cells = <2>;
+      flavor = "balanced";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&sl>;
+    };
   };
 
-  behaviors {
-    #include "behaviors.dtsi"
+  combos {
+    #include "combos.dtsi"
   };
 };
 
