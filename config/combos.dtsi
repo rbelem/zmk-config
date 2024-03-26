@@ -38,10 +38,9 @@ compatible = "zmk,combos";
 COMBO(esc, &kp ESC, 1 2)
 COMBO(tab, &kp TAB, 2 3)
 
-COMBO(function, &sl FUN, 4 30)
-COMBO(maint, &sl MNT, 20 30)
-COMBO(navigation, &mo NAV, 24 30)
-
+COMBO(lnav, &mo NAV, 3 13)
+COMBO(function, &sl FUN, 4 14)
+COMBO(maint, &sl MNT, 10 20)
 COMBO(base, &to BAS, 14 24)
 
 // Right side
@@ -54,11 +53,12 @@ COMBO(return, &kp RET, 17 18)
 
 COMBO(printscreen, &kp PSCRN, 5 25)
 
-COMBO(mouse, &tog MOS, 5 32)
-LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
+COMBO(rnav, &tog NAV, 5 15)
+COMBO(mouse, &tog MOS, 15 25)
+COMBO(numpad, &tog NPD, 9 19)
+COMBO(multimedia, &tog MUL, 19 29)
 
-COMBO(numpad, &tog NPD, 9 32)
-COMBO(multimedia, &tog MUL, 29 32)
+LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
