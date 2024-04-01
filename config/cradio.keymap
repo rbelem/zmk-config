@@ -82,8 +82,9 @@
       compatible = "zmk,behavior-hold-tap";
       label = "kp_sl";
       #binding-cells = <2>;
-      flavor = "tap-unless-interrupted";
-      tapping-term-ms = <400>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <150>;
+      quick-tap-ms = <0>;
       bindings = <&kp>, <&csl>;
     };
     l_td: left_tap_dance {
