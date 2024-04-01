@@ -89,13 +89,13 @@
     l_td: left_tap_dance {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <225>;
+        tapping-term-ms = <200>;
         bindings = <&kp_sl LCTL SYM>, <&lm SYM LCTL>, <&kp RCTRL>;
     };
     r_td: right_tap_dance {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <225>;
+        tapping-term-ms = <200>;
         bindings = <&kp_sl LGUI NUM>, <&lm NUM LGUI>;
     };
   };
