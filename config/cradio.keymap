@@ -128,7 +128,7 @@
 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6      &kp N7      &kp N8    &kp N9       &kp N0
 &none  &none  &none  &none  &none  &kp BR_LBKT &kp MINUS   &kp EQUAL &kp BR_GRAVE &kp BR_QUOTE
 &none  &none  &none  &none  &none  &kp BR_RBKT &kp BR_BSLH &kp COMMA &kp DOT      &kp BR_SLASH
-&sk LCTL &trans &sk LGUI &sk LALT
+&trans &trans &trans &trans
       >;
     };
 
@@ -142,7 +142,7 @@
 &none &none &kp SLASH &kp STAR  &none &kp N0    &kp N1 &kp N2 &kp N3 &none
 &none &none &kp MINUS &kp PLUS  &none &kp DOT   &kp N4 &kp N5 &kp N6 &none
 &none &none &kp PRCT  &kp EQUAL &none &kp TILDE &kp N7 &kp N8 &kp N9 &none
-&sk LCTL &trans &sk LGUI &sk LALT
+&trans &trans &trans &trans
       >;
     };
 
@@ -156,7 +156,7 @@
 &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6)      &kp LS(N7)      &kp LS(N8)    &kp LS(N9)       &kp LS(N0)
 &none      &none      &none      &none      &none      &kp LS(BR_LBKT) &kp LS(MINUS)   &kp LS(EQUAL) &kp LS(BR_GRAVE) &kp LS(BR_QUOTE)
 &none      &none      &none      &none      &none      &kp LS(BR_RBKT) &kp LS(BR_BSLH) &kp LS(COMMA) &kp LS(DOT)      &kp LS(BR_SLASH)
-&kp RCTL &trans &sk LGUI &sk LALT
+&trans &trans &trans &trans
       >;
     };
 
