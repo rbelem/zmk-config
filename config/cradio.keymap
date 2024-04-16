@@ -51,13 +51,11 @@
   behaviors {
     swap: swapper {
       compatible = "zmk,behavior-tri-state";
-      label = "SWAPPER";
       #binding-cells = <0>;
       bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
       ignored-key-positions = <0 10>;
     };
     lm: lm {
-      label = "Layer Mod";
       wait-ms = <0>;
       tap-ms = <0>;
       compatible = "zmk,behavior-macro-two-param";
@@ -73,7 +71,6 @@
         <&macro_release &mo MACRO_PLACEHOLDER>;
     };
     csl: clear_sl {
-      label = "Clear + Sticky Layer";
       wait-ms = <0>;
       tap-ms = <0>;
       compatible = "zmk,behavior-macro-one-param";
@@ -87,7 +84,6 @@
     };
     kp_sl: keypress_stickylayer {
       compatible = "zmk,behavior-hold-tap";
-      label = "kp_sl";
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <200>;
