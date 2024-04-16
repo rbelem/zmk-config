@@ -49,6 +49,13 @@
 
 / {
   behaviors {
+    swap: swapper {
+      compatible = "zmk,behavior-tri-state";
+      label = "SWAPPER";
+      #binding-cells = <0>;
+      bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+      ignored-key-positions = <0 10>;
+    };
     lm: lm {
       label = "Layer Mod";
       wait-ms = <0>;
