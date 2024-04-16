@@ -38,8 +38,8 @@ compatible = "zmk,combos";
 COMBO(esc, &kp ESC, 1 2)
 COMBO(tab, &kp TAB, 2 3)
 
-COMBO(alttab, &swap, 0 10)
-COMBO(lnav, &mo NAV, 3 13)
+COMBO(alttab, &swap, 3 13)
+COMBO(lnav, &mo NAV, 13 23)
 COMBO(function, &sl FUN, 4 14)
 COMBO(maint, &sl MNT, 10 20)
 COMBO(base, &to BAS, 14 24)

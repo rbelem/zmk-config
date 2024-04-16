@@ -53,7 +53,7 @@
       compatible = "zmk,behavior-tri-state";
       #binding-cells = <0>;
       bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-      ignored-key-positions = <0 10>;
+      ignored-key-positions = <3 13>;
     };
     lm: lm {
       wait-ms = <0>;
