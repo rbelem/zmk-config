@@ -87,7 +87,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <200>;
-      quick-tap-ms = <0>;
+      quick-tap-ms = <175>;
       bindings = <&kp>, <&csl>;
     };
     l_td: left_tap_dance {
