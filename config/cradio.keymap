@@ -82,6 +82,14 @@
         <&macro_param_1to1>,
         <&macro_release &sl MACRO_PLACEHOLDER>;
     };
+    h_kp_sl: hold_keypress_stickylayer {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <400>;
+      quick-tap-ms = <175>;
+      bindings = <&kp>, <&sl>;
+    };
     kp_csl: keypress_stickylayer {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -94,7 +102,7 @@
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&kp_csl LCTL SYM>, <&lm SYM LCTL>, <&kp RCTRL>;
+        bindings = <&h_kp_sl LCTL SYM>, <&lm SYM LCTL>, <&kp RCTRL>;
     };
     r_td: right_tap_dance {
         compatible = "zmk,behavior-tap-dance";
