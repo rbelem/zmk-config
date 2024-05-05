@@ -35,28 +35,35 @@ compatible = "zmk,combos";
          ╰─────╯ ╰─────╯         */
 
 // Left side
-COMBO(esc, &kp ESC, 1 2)
-COMBO(tab, &kp TAB, 2 3)
+COMBO(l_esc, &kp ESC, 0 1)
+COMBO(l_backspace, &kp BSPC, 1 2)
+COMBO(l_delete, &kp DEL, 2 3)
+COMBO(l_insert, &kp INS, 3 4)
+
+COMBO(l_return, &kp RET, 11 12)
+COMBO(l_tab, &kp TAB, 12 13)
 
 COMBO(function, &sl FUN, 0 10)
-COMBO(alttab, &swap, 2 12)
-COMBO(lnav, &mo NAV, 3 13)
+COMBO(l_alttab, &swap, 2 12)
+COMBO(l_nav, &mo NAV, 3 13)
 COMBO(maint, &sl MNT, 10 20)
 COMBO(base, &to BAS, 14 24)
 
-COMBO(lmirror, &sl LMI, 24 30)
+COMBO(l_mirror, &sl LMI, 24 30)
 
 // Right side
-COMBO(insert, &kp INS, 5 6)
+COMBO(r_insert, &kp INS, 5 6)
+COMBO(r_delete, &kp DEL, 6 7)
+COMBO(r_backspace, &kp BSPC, 7 8)
+COMBO(r_esc, &kp ESC, 8 9)
 
-COMBO(delete, &kp DEL, 6 7)
-
-COMBO(backspace, &kp BSPC, 7 8)
-COMBO(return, &kp RET, 17 18)
+COMBO(r_tab, &kp TAB, 16 17)
+COMBO(r_return, &kp RET, 17 18)
 
 COMBO(printscreen, &kp PSCRN, 5 25)
 
-COMBO(rnav, &tog NAV, 5 15)
+COMBO(r_nav, &tog NAV, 6 16)
+COMBO(r_alttab, &swap, 7 17)
 COMBO(numpad, &tog NPD, 9 19)
 COMBO(multimedia, &tog MUL, 19 29)
 
@@ -65,7 +72,7 @@ COMBO(mouse, &tog MOS, 15 25)
 LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
-COMBO(rmirror, &sl RMI, 25 33)
+COMBO(r_mirror, &sl RMI, 25 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
