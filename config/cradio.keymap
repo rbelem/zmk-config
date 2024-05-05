@@ -54,7 +54,7 @@
       #binding-cells = <0>;
       bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
       ignored-key-positions = <2 12>;
-      timeout-ms = <700>;
+      timeout-ms = <600>;
     };
     lm: lm {
       wait-ms = <0>;
