@@ -31,8 +31,10 @@
 #define MUL 5
 #define FUN 6
 #define MNT 7
+#define LMI 8
+#define RMI 9
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
-#define MOS 8
+#define MOS 10
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 &caps_word {
@@ -244,6 +246,33 @@
       >;
     };
 
+    lmirror_layer {
+// -----------------------------------------------------------------
+// |  P  |  O  |  I  |  U  |  Y  | |     |     |     |     |     |
+// |  ~  |  L  |  K  |  J  |  H  | |     |     |     |     |     |
+// |  ;  |  .  |  ,  |  M  |  N  | |     |     |     |     |     |
+//                   |LCTL | SPC | |     |     |
+      bindings = <
+&kp P        &kp O   &kp I     &kp U &kp Y &none &none &none &none &none
+&kp BR_TILDE &kp L   &kp K     &kp J &kp H &none &none &none &none &none
+&kp BR_SEMI  &kp DOT &kp COMMA &kp M &kp N &none &none &none &none &none
+&l_td &mt LSHFT SPACE &none &none
+      >;
+    };
+
+    rmirror_layer {
+// -----------------------------------------------------------------
+// |     |     |     |     |     | |  T  |  R  |  E  |  W  |  Q  |
+// |     |     |     |     |     | |  G  |  F  |  D  |  S  |  A  |
+// |     |     |     |     |     | |  B  |  V  |  C  |  X  |  Z  |
+//                   |     |     | | SPC | LCTL|
+      bindings = <
+&none &none &none &none &none &kp T &kp R &kp E &kp W &kp Q
+&none &none &none &none &none &kp G &kp F &kp D &kp S &kp A
+&none &none &none &none &none &kp B &kp V &kp C &kp X &kp Z
+&none &none &mt LSHFT SPACE &l_td
+      >;
+    };
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
     mouse_layer {
 // -----------------------------------------------------------------

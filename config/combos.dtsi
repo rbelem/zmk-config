@@ -44,6 +44,8 @@ COMBO(lnav, &mo NAV, 3 13)
 COMBO(maint, &sl MNT, 10 20)
 COMBO(base, &to BAS, 14 24)
 
+COMBO(lmirror, &sl LMI, 24 30)
+
 // Right side
 COMBO(insert, &kp INS, 5 6)
 
@@ -62,6 +64,8 @@ COMBO(multimedia, &tog MUL, 19 29)
 COMBO(mouse, &tog MOS, 15 25)
 LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
+
+COMBO(rmirror, &sl RMI, 25 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
