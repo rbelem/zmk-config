@@ -55,7 +55,7 @@
       compatible = "zmk,behavior-tri-state";
       #binding-cells = <0>;
       bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-      ignored-key-positions = <2 12>;
+      ignored-key-positions = <2 12 7 17>;
       timeout-ms = <600>;
     };
     lm: lm {
