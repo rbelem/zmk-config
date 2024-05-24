@@ -31,10 +31,9 @@
 #define MUL 5
 #define FUN 6
 #define SYS 7
-#define LMI 8
-#define RMI 9
+#define MIR 8
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
-#define MOS 10
+#define MOS 9
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 &caps_word {
@@ -244,31 +243,17 @@
       >;
     };
 
-    lmirror_layer {
+    mirror_layer {
 // -----------------------------------------------------------------
-// |  P  |  O  |  I  |  U  |  Y  | |     |     |     |     |     |
-// |  ~  |  L  |  K  |  J  |  H  | |     |     |     |     |     |
-// |  ;  |  .  |  ,  |  M  |  N  | |     |     |     |     |     |
-//                   |LCTL | SPC | |     |     |
+// |  P  |  O  |  I  |  U  |  Y  | |  T  |  R  |  E  |  W  |  Q  |
+// |  ~  |  L  |  K  |  J  |  H  | |  G  |  F  |  D  |  S  |  A  |
+// |  ;  |  .  |  ,  |  M  |  N  | |  B  |  V  |  C  |  X  |  Z  |
+//                   |LCTL | SPC | | SPC | LCTL|
       bindings = <
-&kp P        &kp O   &kp I     &kp U &kp Y &none &none &none &none &none
-&kp BR_TILDE &kp L   &kp K     &kp J &kp H &none &none &none &none &none
-&kp BR_SEMI  &kp DOT &kp COMMA &kp M &kp N &none &none &none &none &none
-&l_td &mt LSHFT SPACE &none &none
-      >;
-    };
-
-    rmirror_layer {
-// -----------------------------------------------------------------
-// |     |     |     |     |     | |  T  |  R  |  E  |  W  |  Q  |
-// |     |     |     |     |     | |  G  |  F  |  D  |  S  |  A  |
-// |     |     |     |     |     | |  B  |  V  |  C  |  X  |  Z  |
-//                   |     |     | | SPC | LCTL|
-      bindings = <
-&none &none &none &none &none &kp T &kp R &kp E &kp W &kp Q
-&none &none &none &none &none &kp G &kp F &kp D &kp S &kp A
-&none &none &none &none &none &kp B &kp V &kp C &kp X &kp Z
-&none &none &mt LSHFT SPACE &l_td
+&kp P        &kp O   &kp I     &kp U &kp Y &kp T &kp R &kp E &kp W &kp Q
+&kp BR_TILDE &kp L   &kp K     &kp J &kp H &kp G &kp F &kp D &kp S &kp A
+&kp BR_SEMI  &kp DOT &kp COMMA &kp M &kp N &kp B &kp V &kp C &kp X &kp Z
+&l_td &mt LSHFT SPACE &mt LSHFT SPACE &l_td
       >;
     };
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)

@@ -40,6 +40,8 @@ COMBO(l_tab, &kp TAB, 2 3)
 COMBO(l_insert, &kp INS, 3 4)
 
 COMBO(l_return, &kp RET, 11 12)
+COMBO(l_mirror, &sl MIR, 12 13)
+COMBO(l_t_mirror, &tog MIR, 13 14)
 
 COMBO(l_backspace, &kp BSPC, 21 22)
 COMBO(l_delete, &kp DEL, 22 23)
@@ -50,13 +52,14 @@ COMBO(l_nav, &mo NAV, 3 13)
 COMBO(base, &to BAS, 14 24)
 
 COMBO(l_sys, &sl SYS, 20 30)
-COMBO(l_mirror, &sl LMI, 24 30)
 
 // Right side
 COMBO(r_insert, &kp INS, 5 6)
 COMBO(r_tab, &kp TAB, 6 7)
 COMBO(r_esc, &kp ESC, 7 8)
 
+COMBO(r_t_mirror, &tog MIR, 15 16)
+COMBO(r_mirror, &sl MIR, 16 17)
 COMBO(r_return, &kp RET, 17 18)
 
 COMBO(r_delete, &kp DEL, 26 27)
@@ -74,7 +77,6 @@ COMBO(mouse, &tog MOS, 15 25)
 LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
-COMBO(r_mirror, &sl RMI, 25 33)
 COMBO(r_sys, &sl SYS, 29 33)
 
 // Both sides
