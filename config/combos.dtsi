@@ -72,6 +72,8 @@ COMBO(r_alttab, &swap, 7 17)
 COMBO(numpad, &tog NPD, 9 19)
 COMBO(multimedia, &tog MUL, 19 29)
 
+LAYER_COMBO(numpad_zero, &kp N0, 26 27 28, NPD)
+
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
 COMBO(mouse, &tog MOS, 15 25)
 LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
