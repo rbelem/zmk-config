@@ -30,7 +30,7 @@
 #define NAV 4
 #define MUL 5
 #define FUN 6
-#define MNT 7
+#define SYS 7
 #define LMI 8
 #define RMI 9
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
@@ -230,19 +230,17 @@
       >;
     };
 
-    maint_layer {
+    sys_layer {
 // -----------------------------------------------------------------
-// |     | BT2 | BT1 | BT0 | BLE | |     |     |     |     |     |
-// |     |     |     |     | USB | |     |     |     |     |     |
-// |     |BOOTL|RESET|BTCLR|     | |     |     |     |     |     |
-//                   |BTPRV|BTNXT| |     |     |
-      // impactful buttons
-      // Bluetooth clear, reset, chaning BLE/USB preference, bootloader
+// | BT3 | BT2 | BT1 | BT0 | BLE | | BLE | BT0 | BT1 | BT2 | BT3 |
+// | BT7 | BT6 | BT5 | BT4 |BTCLR| |BTCLR| BT4 | BT5 | BT6 | BT7 |
+// |     | USB |BOOTL|RESET|BTCLA| |BTCLA|RESET|BOOTL| USB |     |
+//                   |BTPRV|BTNXT| |BTNXT|BTPRV|
       bindings = <
-&none &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &out OUT_BLE &none &none &none &none &none
-&none &none        &none        &none        &out OUT_USB &none &none &none &none &none
-&none &bootloader  &sys_reset   &bt BT_CLR   &none        &none &none &none &none &none
-&bt BT_PRV &bt BT_NXT &none &none
+&bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &out OUT_BLE   &out OUT_BLE   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+&bt BT_SEL 7 &bt BT_SEL 6 &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_CLR     &bt BT_CLR     &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7
+&none        &out OUT_USB &bootloader  &sys_reset   &bt BT_CLR_ALL &bt BT_CLR_ALL &sys_reset   &bootloader  &out OUT_USB &none
+&bt BT_PRV &bt BT_NXT &bt BT_NXT &bt BT_PRV
       >;
     };
 

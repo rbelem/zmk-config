@@ -47,9 +47,9 @@ COMBO(l_delete, &kp DEL, 22 23)
 COMBO(function, &sl FUN, 0 10)
 COMBO(l_alttab, &swap, 2 12)
 COMBO(l_nav, &mo NAV, 3 13)
-COMBO(maint, &sl MNT, 10 20)
 COMBO(base, &to BAS, 14 24)
 
+COMBO(l_sys, &sl SYS, 20 30)
 COMBO(l_mirror, &sl LMI, 24 30)
 
 // Right side
@@ -75,6 +75,7 @@ LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 COMBO(r_mirror, &sl RMI, 25 33)
+COMBO(r_sys, &sl SYS, 29 33)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
