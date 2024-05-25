@@ -145,6 +145,20 @@
       >;
     };
 
+    qwerty_mirror {
+// -----------------------------------------------------------------
+// |  P  |  O  |  I  |  U  |  Y  | |  T  |  R  |  E  |  W  |  Q  |
+// |  ~  |  L  |  K  |  J  |  H  | |  G  |  F  |  D  |  S  |  A  |
+// |  ;  |  .  |  ,  |  M  |  N  | |  B  |  V  |  C  |  X  |  Z  |
+//                   |LCTL | SPC | | SPC | LCTL|
+      bindings = <
+&kp P        &kp O   &kp I     &kp U &kp Y &kp T &kp R &kp E &kp W &kp Q
+&kp BR_TILDE &kp L   &kp K     &kp J &kp H &kp G &kp F &kp D &kp S &kp A
+&kp BR_SEMI  &kp DOT &kp COMMA &kp M &kp N &kp B &kp V &kp C &kp X &kp Z
+&l_td &mt LSHFT SPACE &mt LSHFT SPACE &l_td
+      >;
+    };
+
    number_layer {
 // -----------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  | |  6  |  7  |  8  |  9  |  0  |
@@ -243,19 +257,6 @@
       >;
     };
 
-    mirror_layer {
-// -----------------------------------------------------------------
-// |  P  |  O  |  I  |  U  |  Y  | |  T  |  R  |  E  |  W  |  Q  |
-// |  ~  |  L  |  K  |  J  |  H  | |  G  |  F  |  D  |  S  |  A  |
-// |  ;  |  .  |  ,  |  M  |  N  | |  B  |  V  |  C  |  X  |  Z  |
-//                   |LCTL | SPC | | SPC | LCTL|
-      bindings = <
-&kp P        &kp O   &kp I     &kp U &kp Y &kp T &kp R &kp E &kp W &kp Q
-&kp BR_TILDE &kp L   &kp K     &kp J &kp H &kp G &kp F &kp D &kp S &kp A
-&kp BR_SEMI  &kp DOT &kp COMMA &kp M &kp N &kp B &kp V &kp C &kp X &kp Z
-&l_td &mt LSHFT SPACE &mt LSHFT SPACE &l_td
-      >;
-    };
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
     mouse_layer {
 // -----------------------------------------------------------------
