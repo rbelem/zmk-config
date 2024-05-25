@@ -23,16 +23,16 @@
 #define MO_TOG(layer) &mo_tog layer layer
 #define KP_SL_TO(key, layer) &kp_sl_to key layer layer
 
-#define BAS 0
-#define NUM 1
-#define NPD 2
-#define SYM 3
-#define SMI 4
-#define NAV 5
-#define MUL 6
-#define FUN 7
-#define SYS 8
-#define MIR 9
+#define LBASE 0
+#define RBASE 1
+#define NUM 2
+#define NPD 3
+#define SYM 4
+#define SMI 5
+#define NAV 6
+#define MUL 7
+#define FUN 8
+#define SYS 9
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
 #define MOS 10
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
