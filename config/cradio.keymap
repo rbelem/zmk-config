@@ -108,6 +108,18 @@
       tapping-term-ms = <200>;
       bindings = <&h_kp_sl LCTL SYM>, <&h_kp_sl LALT SMI>, <&h_kp_sl LGUI FUN>;
     };
+    td_lbase: tap_dance_lbase {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&sl LBASE>, <&tog LBASE>;
+    };
+    td_rbase: tap_dance_rbase {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&sl RBASE>, <&tog RBASE>;
+    };
     td_npd: tap_dance_numpad {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
