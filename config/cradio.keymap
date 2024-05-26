@@ -29,12 +29,13 @@
 #define NPD 3
 #define SYM 4
 #define SMI 5
-#define NAV 6
-#define MUL 7
-#define FUN 8
-#define SYS 9
+#define LNAV 6
+#define RNAV 7
+#define MUL 8
+#define FUN 9
+#define SYS 10
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
-#define MOS 10
+#define MOS 11
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 &caps_word {
@@ -210,7 +211,21 @@
       >;
     };
 
-    nav_layer {
+    r_nav_layer {
+// -----------------------------------------------------------------
+// |LSHFT|LGUI |LALT |LCTL |     | | HOM |PG_DN|PG_UP| END |     |
+// |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
+// |     |     |     |     |     | |     |     |     |     |     |
+//                   |LCTL | SPC | |LGUI |LALT |
+      bindings = <
+&none &kp END   &kp PG_UP &kp PG_DN &kp HOME &none &kp LCTL &kp LALT &kp LGUI &kp LSHFT
+&none &kp RIGHT &kp UP    &kp DOWN  &kp LEFT &none &none    &none    &none    &none
+&none     &none &none     &none     &none    &none &none    &none    &none    &none
+&trans &trans &trans &trans
+      >;
+    };
+
+    l_nav_layer {
 // -----------------------------------------------------------------
 // |LSHFT|LGUI |LALT |LCTL |     | | HOM |PG_DN|PG_UP| END |     |
 // |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
