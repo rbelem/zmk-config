@@ -209,9 +209,9 @@
 // |  /  |  .  |  ,  |  \  |  ]  | |  }  |  |  |  <  |  >  |  ?  |
 //                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
-&kp LS(N1)   &kp LS(N2)   &kp LS(N3) &kp LS(N4)  &kp LS(N5)    &kp LS(N6)      &kp LS(N7)      &kp LS(N8)    &kp LS(N9)       &kp LS(N0)
-&kp BR_QUOTE &kp BR_GRAVE &kp EQUAL  &kp MINUS   &kp BR_LBKT   &kp LS(BR_LBKT) &kp LS(MINUS)   &kp LS(EQUAL) &kp LS(BR_GRAVE) &kp LS(BR_QUOTE)
-&kp BR_SLASH &kp DOT      &kp COMMA  &kp BR_BSLH &kp BR_RBKT   &kp LS(BR_RBKT) &kp LS(BR_BSLH) &kp LS(COMMA) &kp LS(DOT)      &kp LS(BR_SLASH)
+&kp LS(N1)   &kp LS(N2)   &kp LS(N3) &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LS(N8) &kp LS(N9)   &kp LS(N0)
+&kp BR_QUOTE &kp BR_GRAVE &kp EQUAL  &kp MINUS   &kp BR_LBKT   &kp BR_LBKT &kp MINUS   &kp EQUAL  &kp BR_GRAVE &kp BR_QUOTE
+&kp BR_SLASH &kp DOT      &kp COMMA  &kp BR_BSLH &kp BR_RBKT   &kp BR_RBKT &kp BR_BSLH &kp COMMA  &kp DOT      &kp BR_SLASH
 &trans &trans &trans &trans
       >;
     };
@@ -223,9 +223,9 @@
 // |  ?  |  >  |  <  |  |  |  }  | |  ]  |  \  |  ,  |  .  |  /  |
 //                   |     |     | |     |     |
       bindings = <
-&kp LS(N0)       &kp LS(N9)       &kp LS(N8)    &kp LS(N7)      &kp LS(N6)      &kp LS(N5)  &kp LS(N4)  &kp LS(N3) &kp LS(N2)   &kp LS(N1)
-&kp LS(BR_QUOTE) &kp LS(BR_GRAVE) &kp LS(EQUAL) &kp LS(MINUS)   &kp LS(BR_LBKT) &kp BR_LBKT &kp MINUS   &kp EQUAL  &kp BR_GRAVE &kp BR_QUOTE
-&kp LS(BR_SLASH) &kp LS(DOT)      &kp LS(COMMA) &kp LS(BR_BSLH) &kp LS(BR_RBKT) &kp BR_RBKT &kp BR_BSLH &kp COMMA  &kp DOT      &kp BR_SLASH
+&kp LS(N0)       &kp LS(N9)       &kp LS(N8)    &kp LS(N7)      &kp LS(N6)      &kp LS(N5)      &kp LS(N4)      &kp LS(N3)     &kp LS(N2)       &kp LS(N1)
+&kp LS(BR_QUOTE) &kp LS(BR_GRAVE) &kp LS(EQUAL) &kp LS(MINUS)   &kp LS(BR_LBKT) &kp LS(BR_LBKT) &kp LS(MINUS)   &kp LS(EQUAL)  &kp LS(BR_GRAVE) &kp LS(BR_QUOTE)
+&kp LS(BR_SLASH) &kp LS(DOT)      &kp LS(COMMA) &kp LS(BR_BSLH) &kp LS(BR_RBKT) &kp LS(BR_RBKT) &kp LS(BR_BSLH) &kp LS(COMMA)  &kp LS(DOT)      &kp LS(BR_SLASH)
 &trans &trans &trans &trans
       >;
     };
