@@ -92,8 +92,9 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
-      tapping-term-ms = <0>;
+      tapping-term-ms = <200>;
       bindings = <&kp>, <&sl>;
+      hold-while-undecided;
     };
     kp_csl: keypress_stickylayer {
       compatible = "zmk,behavior-hold-tap";
