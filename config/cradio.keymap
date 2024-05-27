@@ -90,8 +90,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
-      tapping-term-ms = <0>;
-      quick-tap-ms = <0>;
+      tapping-term-ms = <100>;
       bindings = <&kp>, <&sl>;
     };
     kp_csl: keypress_stickylayer {
@@ -105,25 +104,25 @@
     td: tap_dance {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
-      tapping-term-ms = <200>;
+      tapping-term-ms = <300>;
       bindings = <&h_kp_sl LCTL SYM>, <&h_kp_sl LALT SMI>, <&h_kp_sl LGUI FUN>;
     };
     td_lbase: tap_dance_lbase {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
-      tapping-term-ms = <200>;
+      tapping-term-ms = <300>;
       bindings = <&sl LBASE>, <&tog LBASE>;
     };
     td_rbase: tap_dance_rbase {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
-      tapping-term-ms = <200>;
+      tapping-term-ms = <300>;
       bindings = <&sl RBASE>, <&tog RBASE>;
     };
     td_npd: tap_dance_numpad {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
-      tapping-term-ms = <200>;
+      tapping-term-ms = <300>;
       bindings = <&sl NPD>, <&tog NPD>;
     };
   };
