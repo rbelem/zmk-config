@@ -59,7 +59,7 @@
       ignored-key-positions = <2 12 7 17>;
       timeout-ms = <600>;
     };
-    lm: lm {
+    lm: layer_macro {
       wait-ms = <0>;
       tap-ms = <0>;
       compatible = "zmk,behavior-macro-two-param";
