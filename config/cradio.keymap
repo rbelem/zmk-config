@@ -121,6 +121,12 @@
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
       bindings = <&sl NUM>, <&tog NPD>;
     };
+    td_nav: tap_dance_nav {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <TD_TAPPING_TERM_MS>;
+      bindings = <&sl NAV>, <&tog NAV>;
+    };
   };
 
   combos {
