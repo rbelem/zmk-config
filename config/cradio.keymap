@@ -29,13 +29,12 @@
 #define NPD 3
 #define SYM 4
 #define SMI 5
-#define LNAV 6
-#define RNAV 7
-#define MUL 8
-#define FUN 9
-#define SYS 10
+#define NAV 6
+#define MUL 7
+#define FUN 8
+#define SYS 9
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
-#define MOS 11
+#define MOS 10
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 #define TD_TAPPING_TERM_MS 400
@@ -231,30 +230,16 @@
       >;
     };
 
-    r_nav_layer {
+    nav_layer {
 // -----------------------------------------------------------------
 // |LSHFT|LGUI |LALT |LCTL |     | | HOM |PG_DN|PG_UP| END |     |
 // |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
 // |     |     |     |     |     | |     |     |     |     |     |
 //                   |LCTL | SPC | |LGUI |LALT |
       bindings = <
-&none &kp END  &kp PG_UP &kp PG_DN &kp HOME  &none &kp LCTL &kp LALT &kp LGUI &kp LSHFT
-&none &kp LEFT &kp UP    &kp DOWN  &kp RIGHT &none &none    &none    &none    &none
-&none &none    &none     &none     &none     &none &none    &none    &none    &none
-&trans &trans &trans &trans
-      >;
-    };
-
-    l_nav_layer {
-// -----------------------------------------------------------------
-// |LSHFT|LGUI |LALT |LCTL |     | | HOM |PG_DN|PG_UP| END |     |
-// |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
-// |     |     |     |     |     | |     |     |     |     |     |
-//                   |LCTL | SPC | |LGUI |LALT |
-      bindings = <
-&kp LSHFT &kp LGUI &kp LALT &kp LCTL &none &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
-&none     &none    &none    &none    &none &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
-&none     &none    &none    &none    &none &none    &none     &none     &none     &none
+&none &kp HOME &kp PG_UP &kp PG_DN &kp END   &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+&none &kp LEFT &kp UP    &kp DOWN  &kp RIGHT &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+&none &none    &none     &none     &none     &none    &none     &none     &none     &none
 &trans &trans &trans &trans
       >;
     };
