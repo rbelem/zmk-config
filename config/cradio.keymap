@@ -23,8 +23,8 @@
 #define MO_TOG(layer) &mo_tog layer layer
 #define KP_SL_TO(key, layer) &kp_sl_to key layer layer
 
-#define LBASE 0
-#define RBASE 1
+#define BASE 0
+#define MBASE 1
 #define NUM 2
 #define NPD 3
 #define SYM 4
@@ -109,17 +109,11 @@
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
       bindings = <&h_kp_sl LCTL SYM>, <&h_kp_sl LALT SMI>, <&h_kp_sl LGUI FUN>;
     };
-    td_lbase: tap_dance_lbase {
+    td_mbase: tap_dance_mbase {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&sl LBASE>, <&tog LBASE>;
-    };
-    td_rbase: tap_dance_rbase {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>;
-      tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&sl RBASE>, <&tog RBASE>;
+      bindings = <&sl MBASE>, <&tog MBASE>;
     };
     td_npd: tap_dance_numpad {
       compatible = "zmk,behavior-tap-dance";
