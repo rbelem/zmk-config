@@ -51,6 +51,7 @@ COMBO(l_base, &to BASE, 14 24)
 
 COMBO(l_numpad, &td_npd, 0 30)
 COMBO(l_sys, &sl SYS, 20 30)
+COMBO(l_compose, &sk LS(RALT), 23 30)
 COMBO(l_scut, &sl SCUT, 24 30)
 
 LAYER_COMBO(l_numpad_zero, &kp N0, 21 22 23, NPD)
@@ -83,6 +84,7 @@ LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 COMBO(r_scut, &sl SCUT, 25 33)
+COMBO(r_compose, &sk LS(RALT), 26 33)
 COMBO(r_sys, &sl SYS, 29 33)
 
 // Both sides
