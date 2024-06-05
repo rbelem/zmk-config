@@ -33,8 +33,9 @@
 #define MUL 7
 #define FUN 8
 #define SYS 9
+#define SCUT 10
 #if IS_ENABLED(CONFIG_ZMK_MOUSE)
-#define MOS 10
+#define MOS 11
 #endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 #define TD_TAPPING_TERM_MS 400
@@ -283,6 +284,20 @@
 &bt BT_SEL 7 &bt BT_SEL 6 &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_CLR     &bt BT_CLR     &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7
 &none        &out OUT_USB &bootloader  &sys_reset   &bt BT_CLR_ALL &bt BT_CLR_ALL &sys_reset   &bootloader  &out OUT_USB &none
 &bt BT_PRV &bt BT_NXT &bt BT_NXT &bt BT_PRV
+      >;
+    };
+
+    shortcut_layer {
+// -----------------------------------------------------------------
+// |     |     |     |     |     | |     |     |     |     |     |
+// |     |     |     |     |     | |     |     |     |     |     |
+// |     |     |     |     |     | |     |     |     |     |     |
+//                   |     |     | |     |     |
+      bindings = <
+&none &none         &none         &none         &none         &none         &none         &none         &none         &none
+&none &kp LC(LG(H)) &kp LC(LG(K)) &kp LC(LG(J)) &kp LC(LG(L)) &kp LC(LG(H)) &kp LC(LG(J)) &kp LC(LG(K)) &kp LC(LG(L)) &none
+&none &none         &none         &none         &none         &none         &none         &none         &none         &none
+&none &none &none &none
       >;
     };
 
