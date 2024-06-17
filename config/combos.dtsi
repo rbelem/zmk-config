@@ -54,6 +54,9 @@ COMBO(l_sys, &sl SYS, 20 30)
 COMBO(l_scut, &sl SCUT, 23 30)
 COMBO(l_compose, &kp LS(RALT), 24 30)
 
+COMBO(l_reset, &sys_reset, 20 24)
+COMBO(l_bootloader, &bootloader, 0 4 20 24)
+
 // Right side
 COMBO(r_insert, &kp INS, 5 6)
 COMBO(r_tab, &kp TAB, 6 7)
@@ -82,6 +85,9 @@ LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
 COMBO(r_compose, &kp LS(RALT), 25 33)
 COMBO(r_scut, &sl SCUT, 26 33)
 COMBO(r_sys, &sl SYS, 29 33)
+
+COMBO(r_reset, &sys_reset, 25 29)
+COMBO(r_bootloader, &bootloader, 5 9 25 29)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)

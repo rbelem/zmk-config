@@ -280,9 +280,9 @@
 // |     | USB |BOOTL|RESET|BTCLA| |BTCLA|RESET|BOOTL| USB |     |
 //                   |BTPRV|BTNXT| |BTNXT|BTPRV|
       bindings = <
-&bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &out OUT_BLE   &out OUT_BLE   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-&bt BT_SEL 7 &bt BT_SEL 6 &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_CLR     &bt BT_CLR     &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7
-&none        &out OUT_USB &bootloader  &sys_reset   &bt BT_CLR_ALL &bt BT_CLR_ALL &sys_reset   &bootloader  &out OUT_USB &none
+&bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1   &bt BT_SEL 0 &out OUT_BLE &out OUT_BLE &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3
+&bt BT_SEL 7 &bt BT_SEL 6 &bt BT_SEL 5   &bt BT_SEL 4 &out OUT_USB &out OUT_USB &bt BT_SEL 4 &bt BT_SEL 5   &bt BT_SEL 6 &bt BT_SEL 7
+&none        &none        &bt BT_CLR_ALL &bt BT_CLR   &none        &none        &bt BT_CLR   &bt BT_CLR_ALL &none
 &bt BT_PRV &bt BT_NXT &bt BT_NXT &bt BT_PRV
       >;
     };
