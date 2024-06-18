@@ -93,7 +93,8 @@
       #binding-cells = <2>;
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
-      bindings = <&kp>, <&sl>;
+      quick-tap-ms = <75>;
+      bindings = <&kp>, <&csl>;
       hold-while-undecided;
     };
     kp_csl: keypress_stickylayer {
@@ -108,7 +109,7 @@
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&h_kp_sl LCTL SYM>, <&h_kp_sl LALT SMI>, <&h_kp_sl LGUI FUN>;
+      bindings = <&h_kp_sl LCTL SYM>, <&kp_csl LALT SMI>, <&kp_csl LGUI FUN>;
     };
     td_mbase: tap_dance_mbase {
       compatible = "zmk,behavior-tap-dance";
