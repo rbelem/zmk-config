@@ -50,6 +50,7 @@ COMBO(l_nav, &td_nav, 3 13)
 COMBO(l_base, &to BASE, 14 24)
 
 COMBO(l_numpad, &td_npd, 0 30)
+COMBO(l_fun, &td_fun, 4 30)
 COMBO(l_sys, &sl SYS, 20 30)
 COMBO(l_scut, &sl SCUT, 23 30)
 COMBO(l_compose, &kp LS(RALT), 24 30)
@@ -73,6 +74,7 @@ COMBO(printscreen, &kp PSCRN, 5 25)
 COMBO(r_nav, &td_nav, 6 16)
 COMBO(r_alttab, &swap, 7 17)
 
+COMBO(r_fun, &td_fun, 5 33)
 COMBO(r_numpad, &td_npd, 9 33)
 COMBO(multimedia, &tog MUL, 19 33)
 
