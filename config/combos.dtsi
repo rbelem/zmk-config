@@ -47,16 +47,25 @@ COMBO(l_delete, &kp DEL, 22 23)
 
 COMBO(l_alttab, &swap, 2 12)
 COMBO(l_nav, &td_nav, 3 13)
+#if IS_ENABLED(CONFIG_ZMK_MOUSE)
+COMBO(l_mouse, &tog MOS, 4 14)
+#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
+COMBO(l_printscreen, &kp PSCRN, 4 24)
 COMBO(l_base, &to BASE, 14 24)
 
-COMBO(l_numpad, &td_npd, 0 30)
-COMBO(l_fun, &td_fun, 4 30)
-COMBO(l_sys, &sl SYS, 20 30)
-COMBO(l_scut, &sl SCUT, 23 30)
+COMBO(l_scut, &sl SCUT, 0 30)
+COMBO(l_numpad, &td_npd, 3 30)
+COMBO(l_fun, &td_fun, 14 30)
+COMBO(l_multimedia, &tog MUL, 20 30)
 COMBO(l_compose, &kp LS(RALT), 24 30)
 
+COMBO(l_sys, &sl SYS, 0 4)
 COMBO(l_reset, &sys_reset, 20 24)
-COMBO(l_bootloader, &bootloader, 0 4 20 24)
+COMBO(l_bootloader, &bootloader, 0 10 20)
+
+#if IS_ENABLED(CONFIG_ZMK_MOUSE)
+LAYER_COMBO(l_mouse_mclk, &mkp MCLK, 30 31, MOS)
+#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 // Right side
 COMBO(r_insert, &kp INS, 5 6)
@@ -69,27 +78,27 @@ COMBO(r_return, &kp RET, 17 18)
 COMBO(r_delete, &kp DEL, 26 27)
 COMBO(r_backspace, &kp BSPC, 27 28)
 
-COMBO(printscreen, &kp PSCRN, 5 25)
-
+#if IS_ENABLED(CONFIG_ZMK_MOUSE)
+COMBO(r_mouse, &tog MOS, 5 15)
+#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
+COMBO(r_printscreen, &kp PSCRN, 5 25)
+COMBO(r_base, &to BASE, 15 25)
 COMBO(r_nav, &td_nav, 6 16)
 COMBO(r_alttab, &swap, 7 17)
 
-COMBO(r_fun, &td_fun, 5 33)
-COMBO(r_numpad, &td_npd, 9 33)
-COMBO(multimedia, &tog MUL, 19 33)
-
-COMBO(r_base, &to BASE, 14 24)
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
-COMBO(mouse, &tog MOS, 5 33)
-LAYER_COMBO(mouse_mclk, &mkp MCLK, 32 33, MOS)
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
-
+COMBO(r_numpad, &td_npd, 6 33)
+COMBO(r_scut, &sl SCUT, 9 33)
+COMBO(r_fun, &td_fun, 15 33)
 COMBO(r_compose, &kp LS(RALT), 25 33)
-COMBO(r_scut, &sl SCUT, 26 33)
-COMBO(r_sys, &sl SYS, 29 33)
+COMBO(r_multimedia, &tog MUL, 29 33)
 
+COMBO(r_sys, &sl SYS, 5 9)
 COMBO(r_reset, &sys_reset, 25 29)
-COMBO(r_bootloader, &bootloader, 5 9 25 29)
+COMBO(r_bootloader, &bootloader,  9 19 29)
+
+#if IS_ENABLED(CONFIG_ZMK_MOUSE)
+LAYER_COMBO(r_mouse_mclk, &mkp MCLK, 32 33, MOS)
+#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
