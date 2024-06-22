@@ -24,18 +24,18 @@
 #define KP_SL_TO(key, layer) &kp_sl_to key layer layer
 
 #define BASE 0
-#define MBASE 1
-#define NUM 2
-#define NPD 3
-#define SYM 4
-#define SMI 5
-#define NAV 6
-#define MUL 7
-#define FUN 8
-#define FUNSK 9
-#define SYS 10
-#define SCUT 11
-#define MOS 12
+#define BASE_MIRROR 1
+#define NUMBER 2
+#define NUMPAD 3
+#define SYMBOL 4
+#define SYMBOL_MIRROR 5
+#define NAVIGATION 6
+#define MULTIMEDIA 7
+#define FUNCTION 8
+#define FUNCTION_SL 9
+#define BLUETOOTH 10
+#define SHORTCUT 11
+#define MOUSE 12
 
 #define TD_TAPPING_TERM_MS 400
 
@@ -107,31 +107,31 @@
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&h_kp_sl LCTL SYM>, <&kp_csl LALT SMI>, <&kp_csl LGUI FUN>;
+      bindings = <&h_kp_sl LCTL SYMBOL>, <&kp_csl LALT SYMBOL_MIRROR>, <&kp_csl LGUI FUNCTION>;
     };
     td_mbase: tap_dance_mbase {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&sl MBASE>, <&tog MBASE>;
+      bindings = <&sl BASE_MIRROR>, <&tog BASE_MIRROR>;
     };
     td_npd: tap_dance_numpad {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&sl NUM>, <&tog NPD>;
+      bindings = <&sl NUMBER>, <&tog NUMPAD>;
     };
     td_nav: tap_dance_nav {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&sl NAV>, <&tog NAV>;
+      bindings = <&sl NAVIGATION>, <&tog NAVIGATION>;
     };
     td_fun: tap_dance_function {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&sl FUNSK>, <&tog FUN>;
+      bindings = <&sl FUNCTION_SL>, <&tog FUNCTION>;
     };
   };
 
@@ -236,7 +236,7 @@
       >;
     };
 
-    nav_layer {
+    navigation_layer {
 // -----------------------------------------------------------------
 // |LSHFT|LGUI |LALT |LCTL |     | | HOM |PG_DN|PG_UP| END |     |
 // |     |     |     |     |     | | LFT | DWN | U P |RIGHT|     |
@@ -264,7 +264,7 @@
       >;
     };
 
-    fun_layer {
+    function_layer {
 // -----------------------------------------------------------------
 // |     | F 7 | F 8 | F 9 | F12 | |     | F 7 | F 8 | F 9 | F12 |
 // |     | F 4 | F 5 | F 6 | F11 | |     | F 4 | F 5 | F 6 | F11 |
@@ -278,7 +278,7 @@
       >;
     };
 
-    fun_sk_layer {
+    function_sticky_layer {
 // -----------------------------------------------------------------
 // |     | F 7 | F 8 | F 9 | F12 | |     | F 7 | F 8 | F 9 | F12 |
 // |     | F 4 | F 5 | F 6 | F11 | |     | F 4 | F 5 | F 6 | F11 |
@@ -292,7 +292,7 @@
       >;
     };
 
-    sys_layer {
+    bluetooth_layer {
 // -----------------------------------------------------------------
 // | BT3 | BT2 | BT1 | BT0 | BLE | | BLE | BT0 | BT1 | BT2 | BT3 |
 // | BT7 | BT6 | BT5 | BT4 |BTCLR| |BTCLR| BT4 | BT5 | BT6 | BT7 |

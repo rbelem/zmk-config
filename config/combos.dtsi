@@ -47,21 +47,21 @@ COMBO(l_delete, &kp DEL, 22 23)
 
 COMBO(l_alttab, &swap, 2 12)
 COMBO(l_nav, &td_nav, 3 13)
-COMBO(l_mouse, &tog MOS, 4 14)
+COMBO(l_mouse, &tog MOUSE, 4 14)
 COMBO(l_printscreen, &kp PSCRN, 4 24)
 COMBO(l_base, &to BASE, 14 24)
 
-COMBO(l_scut, &sl SCUT, 0 30)
+COMBO(l_scut, &sl SHORTCUT, 0 30)
 COMBO(l_numpad, &td_npd, 3 30)
 COMBO(l_fun, &td_fun, 14 30)
-COMBO(l_multimedia, &tog MUL, 20 30)
+COMBO(l_multimedia, &tog MULTIMEDIA, 20 30)
 COMBO(l_compose, &kp LS(RALT), 24 30)
 
-COMBO(l_sys, &sl SYS, 0 4)
+COMBO(l_bluetooth, &sl BLUETOOTH, 0 4)
 COMBO(l_reset, &sys_reset, 20 24)
 COMBO(l_bootloader, &bootloader, 0 10 20)
 
-LAYER_COMBO(l_mouse_mclk, &mkp MCLK, 30 31, MOS)
+LAYER_COMBO(l_mouse_mclk, &mkp MCLK, 30 31, MOUSE)
 
 // Right side
 COMBO(r_insert, &kp INS, 5 6)
@@ -74,23 +74,23 @@ COMBO(r_return, &kp RET, 17 18)
 COMBO(r_delete, &kp DEL, 26 27)
 COMBO(r_backspace, &kp BSPC, 27 28)
 
-COMBO(r_mouse, &tog MOS, 5 15)
+COMBO(r_mouse, &tog MOUSE, 5 15)
 COMBO(r_printscreen, &kp PSCRN, 5 25)
 COMBO(r_base, &to BASE, 15 25)
 COMBO(r_nav, &td_nav, 6 16)
 COMBO(r_alttab, &swap, 7 17)
 
 COMBO(r_numpad, &td_npd, 6 33)
-COMBO(r_scut, &sl SCUT, 9 33)
+COMBO(r_scut, &sl SHORTCUT, 9 33)
 COMBO(r_fun, &td_fun, 15 33)
 COMBO(r_compose, &kp LS(RALT), 25 33)
-COMBO(r_multimedia, &tog MUL, 29 33)
+COMBO(r_multimedia, &tog MULTIMEDIA, 29 33)
 
-COMBO(r_sys, &sl SYS, 5 9)
+COMBO(r_sys, &sl BLUETOOTH, 5 9)
 COMBO(r_reset, &sys_reset, 25 29)
 COMBO(r_bootloader, &bootloader,  9 19 29)
 
-LAYER_COMBO(r_mouse_mclk, &mkp MCLK, 32 33, MOS)
+LAYER_COMBO(r_mouse_mclk, &mkp MCLK, 32 33, MOUSE)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
