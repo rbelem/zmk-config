@@ -35,9 +35,7 @@
 #define FUNSK 9
 #define SYS 10
 #define SCUT 11
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
 #define MOS 12
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 #define TD_TAPPING_TERM_MS 400
 
@@ -322,7 +320,6 @@
       >;
     };
 
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
     mouse_layer {
 // -----------------------------------------------------------------
 // |LSHFT|LGUI |LALT |LCTL |     | |SCR L|SCRDN|SCRUP|SCR R|     |
@@ -336,7 +333,5 @@
 &trans &trans &mkp LCLK &mkp RCLK
       >;
     };
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
-
   };
 };

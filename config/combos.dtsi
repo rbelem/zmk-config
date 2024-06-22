@@ -47,9 +47,7 @@ COMBO(l_delete, &kp DEL, 22 23)
 
 COMBO(l_alttab, &swap, 2 12)
 COMBO(l_nav, &td_nav, 3 13)
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
 COMBO(l_mouse, &tog MOS, 4 14)
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 COMBO(l_printscreen, &kp PSCRN, 4 24)
 COMBO(l_base, &to BASE, 14 24)
 
@@ -63,9 +61,7 @@ COMBO(l_sys, &sl SYS, 0 4)
 COMBO(l_reset, &sys_reset, 20 24)
 COMBO(l_bootloader, &bootloader, 0 10 20)
 
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
 LAYER_COMBO(l_mouse_mclk, &mkp MCLK, 30 31, MOS)
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 // Right side
 COMBO(r_insert, &kp INS, 5 6)
@@ -78,9 +74,7 @@ COMBO(r_return, &kp RET, 17 18)
 COMBO(r_delete, &kp DEL, 26 27)
 COMBO(r_backspace, &kp BSPC, 27 28)
 
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
 COMBO(r_mouse, &tog MOS, 5 15)
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 COMBO(r_printscreen, &kp PSCRN, 5 25)
 COMBO(r_base, &to BASE, 15 25)
 COMBO(r_nav, &td_nav, 6 16)
@@ -96,9 +90,7 @@ COMBO(r_sys, &sl SYS, 5 9)
 COMBO(r_reset, &sys_reset, 25 29)
 COMBO(r_bootloader, &bootloader,  9 19 29)
 
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
 LAYER_COMBO(r_mouse_mclk, &mkp MCLK, 32 33, MOS)
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
 
 // Both sides
 COMBO_LONG(capsword, &caps_word, 14 15)
