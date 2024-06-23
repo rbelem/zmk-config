@@ -37,7 +37,28 @@
 #define SHORTCUT 11
 #define MOUSE 12
 
+
+/* Global settings */
+
+#define QUICK_TAP_MS 175
 #define TD_TAPPING_TERM_MS 400
+
+
+&sk {  // sticky-key config
+  release-after-ms = <900>;  // release after 0.6s
+  quick-release;             // no double capitalization when rolling keys
+};
+
+&sl {  // sticky-layer config
+  ignore-modifiers;          // allow chording sticky mods & layers
+  release-after-ms = <400>;
+};
+
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -45,10 +66,6 @@
 
 &mt {
   tapping-term-ms = <250>;
-};
-
-&sl {
-  release-after-ms = <400>;
 };
 
 / {
@@ -116,6 +133,7 @@
     #include "combos.dtsi"
   };
 };
+
 
 /*           34 Keys
 ╭──────────────╮ ╭──────────────╮
