@@ -97,7 +97,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
-      tapping-term-ms = <200>;
+      tapping-term-ms = <280>;
       bindings = <&kp>, <&sl>;
       hold-while-undecided;
     };
@@ -105,8 +105,8 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <100>;
-      quick-tap-ms = <75>;
+      tapping-term-ms = <280>;
+      quick-tap-ms = <QUICK_TAP_MS>;
       bindings = <&kp>, <&csl>;
     };
     td: tap_dance {
