@@ -133,6 +133,12 @@
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
       bindings = <&sl NAVIGATION>, <&tog NAVIGATION>;
     };
+    td_mouse: tap_dance_mouse {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <TD_TAPPING_TERM_MS>;
+      bindings = <&sl MOUSE>, <&tog MOUSE>;
+    };
     td_fun: tap_dance_function {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
