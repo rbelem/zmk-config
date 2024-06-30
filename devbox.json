@@ -1,0 +1,15 @@
+{
+  "packages": [
+    "python@latest",
+  ],
+  "shell": {
+    "init_hook": [
+      ". $VENV_DIR/bin/activate",
+      "pip install -r requirements.txt"
+    ],
+    "scripts": {
+      "bootstrap": "keymap parse -c 10 -z ./config/cradio.keymap >sweep_keymap.yaml",
+      "produce-svg": "keymap draw sweep_keymap.yaml >sweep_keymap.ortho.svg",
+    }
+  }
+}

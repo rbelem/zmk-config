@@ -1,0 +1,11 @@
+annotated-types==0.7.0
+keymap-drawer==0.17.0
+pcpp==1.30
+platformdirs==3.11.0
+pydantic==2.7.4
+pydantic-settings==2.3.4
+pydantic_core==2.18.4
+pyparsing==3.1.2
+python-dotenv==1.0.1
+PyYAML==6.0.1
+typing_extensions==4.12.2
