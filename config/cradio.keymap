@@ -263,7 +263,7 @@
       bindings = <
 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1   &bt BT_SEL 0 &out OUT_BLE    &out OUT_BLE &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3
 &bt BT_SEL 7 &bt BT_SEL 6 &bt BT_SEL 5   &bt BT_SEL 4 &out OUT_USB    &out OUT_USB &bt BT_SEL 4 &bt BT_SEL 5   &bt BT_SEL 6 &bt BT_SEL 7
-&none        &none        &bt BT_CLR_ALL &bt BT_CLR   &none           &none        &bt BT_CLR   &bt BT_CLR_ALL &none
+&none        &none        &bt BT_CLR_ALL &bt BT_CLR   &none           &none        &bt BT_CLR   &bt BT_CLR_ALL &none        &none
 &bt BT_PRV &bt BT_NXT                                                 &bt BT_NXT &bt BT_PRV
       >;
     };
