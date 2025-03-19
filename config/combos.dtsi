@@ -39,6 +39,7 @@ COMBO(l_esc, &kp ESC, 1 2)
 COMBO(l_tab, &kp TAB, 2 3)
 COMBO(l_insert, &kp INS, 3 4)
 
+COMBO(l_cedil, &kp BR_CEDIL, 10 11)
 COMBO(l_return, &kp RET, 11 12)
 COMBO(l_mbase, &td_mbase, 12 13)
 
@@ -69,6 +70,7 @@ COMBO(r_esc, &kp ESC, 7 8)
 
 COMBO(r_mbase, &td_mbase, 16 17)
 COMBO(r_return, &kp RET, 17 18)
+COMBO(r_cedil, &kp BR_CEDIL, 18 19)
 
 COMBO(r_delete, &kp DEL, 26 27)
 COMBO(r_backspace, &kp BSPC, 27 28)

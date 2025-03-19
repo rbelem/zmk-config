@@ -11,6 +11,7 @@
 #define BR_GRAVE LS(BR_ACUTE)
 #define BR_QUOTE GRAVE
 #define BR_TILDE QUOT
+#define BR_CEDIL SEMI
 #define BR_SEMI SLASH
 #define BR_LBKT RBKT
 #define BR_RBKT BSLH
