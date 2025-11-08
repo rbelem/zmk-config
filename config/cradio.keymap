@@ -155,6 +155,10 @@
   combos {
     #include "combos.dtsi"
   };
+
+  leader {
+    #include "leader.dtsi"
+  };
 };
 
 

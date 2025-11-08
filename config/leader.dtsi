@@ -1,0 +1,14 @@
+#undef LEADER
+#define LEADER(name, leader_bindings, leader_sequence) \
+  leader: leader_##name { \
+    compatible = "zmk,behavior-leader-key"; \
+    #binding-cells = <0>; \
+    ignore-keys = <LSHFT RSHFT>; \
+    leader_sequence_ ## name { \
+      bindings = <leader_bindings>; \
+      sequence = <leader_sequence>; \
+    }; \
+  };
+
+LEADER(l_ctrlaltdel, &kp LC(LA(DEL)), Q)
+//LEADER(r_ctrlaltdel, &kp LC(LA(DEL)), P)
