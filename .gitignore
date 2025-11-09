@@ -1,0 +1,8 @@
+.build
+.direnv
+.venv
+.west
+modules
+firmware
+zephyr
+zmk
