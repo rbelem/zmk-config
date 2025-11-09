@@ -1,0 +1,66 @@
+{
+  "packages": [
+    "python@latest",
+    "uv@latest",
+    "cmake@latest",
+    "gcc@latest",
+    "dtc@latest",
+    "ninja@latest",
+    "yq@latest",
+  ],
+  "shell": {
+    "init_hook": [
+      ". $VENV_DIR/bin/activate",
+      "uv pip install west",
+      "west init -l config",
+      "west update --fetch-opt=--filter=blob:none",
+      "west zephyr-export",
+    ],
+    "scripts": {
+      "_parse_targets": [
+        "expr=$1",
+        "attrs=\"[.board, .shield, .snippet, .\\\"artifact-name\\\"]\"",
+        "filter=\"(($attrs | map(. // [.]) | combinations), ((.include // {})[] | $attrs)) | join(\\\",\\\")\"",
+        "echo \"$(yq -r \"$filter\" build.yaml | grep -v \"^,\" | grep -i \"${expr/#all/.*}\")\"",
+      ],
+
+      // build firmware for single board & shield combination
+      "_build_single": [
+        "set -euo pipefail",
+
+        "board=$1",
+        "shield=$2",
+        "snippet=$3",
+        "artifact=$4",
+        "west_args=",
+
+        "artifact=\"${artifact:-${shield:+${shield// /+}-}${board}}\"",
+        "build_dir=\"{{ build / '$artifact' }}\"",
+
+        "echo \"Building firmware for $artifact...\"",
+        "west build -s zmk/app -d \"$build_dir\" -b $board {{ west_args }} ${snippet:+-S \"$snippet\"} -- \\",
+        "  -DZMK_CONFIG=\"{{ config }}\" ${shield:+-DSHIELD=\"$shield\"}",
+        "if [[ -f \"$build_dir/zephyr/zmk.uf2\" ]]; then",
+        "  mkdir -p \"{{ out }}\" && cp \"$build_dir/zephyr/zmk.uf2\" \"{{ out }}/$artifact.uf2\"",
+        "else",
+        "  mkdir -p \"{{ out }}\" && cp \"$build_dir/zephyr/zmk.bin\" \"{{ out }}/$artifact.bin\"",
+        "fi",
+      ],
+
+      // build firmware for matching targets
+      "build": [
+        "set -euo pipefail",
+
+        "expr=$1",
+        "west_args=",
+
+        "targets=$(just _parse_targets {{ expr }})",
+
+        "[[ -z $targets ]] && echo \"No matching targets found. Aborting...\" >&2 && exit 1",
+        "echo \"$targets\" | while IFS=, read -r board shield snippet artifact; do",
+        "  devbox run _build_single \"$board\" \"$shield\" \"$snippet\" \"$artifact\" {{ west_args }}",
+        "done",
+      ],
+    },
+  },
+}
