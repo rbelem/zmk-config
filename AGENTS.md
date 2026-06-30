@@ -6,11 +6,11 @@ ZMK firmware config for a 34-key Ferris Sweep running on nice_nano_v2.
 
 ```
 config/           # West-managed config dir (west.yml pins to urob v0.3, not ZMK main)
-  cradio.keymap   # Main keymap — 13 layers
+  cradio.keymap   # Main keymap — 11 layers
   cradio.conf     # Kconfig overrides
   combos.dtsi     # Combo (chord) definitions
   leader.dtsi     # Leader-key sequences
-  macros.dtsi     # Custom behaviors (layer_macro, clear_sl)
+  macros.dtsi     # Compose-key macros for accented chars
   west.yml        # West manifest + urob ZMK modules
 boards/shields/   # Empty — cradio lives upstream in ZMK
 build.yaml        # CI build matrix
@@ -50,11 +50,9 @@ GitHub Actions — `.github/workflows/build.yml` delegates to `zmkfirmware/zmk/.
 ## Keymap quirks
 
 - **Brazilian ABNT2**: `BR_*` defines map ABNT2 keys to US positions (BR_ACUTE=`LBKT`, BR_TILDE=`QUOT`, BR_CEDIL=`SEMI`, etc.)
-- **Auto-shift macro**: `AS(keycode)` = `&as LS(keycode) keycode`
-- **Layer tap dance pattern**: `MO_TOG(layer)` / `KP_SL_TO(key, layer)` convenience macros. Most layer accesses use tap-dance → momentary-on-tap, toggle-on-double-tap
 - **34-key layout** — no number row; thumb keys at positions 30-33
 - **Home row mods**: `&mt` tapping-term-ms=250
-- **Custom behaviors**: `swap` (tri-state alt+tab), `td_*` (multi-function tap dances), `h_kp_sl` / `kp_csl` (hold-tap combos)
+- **Custom behaviors**: `swap` (tri-state alt+tab), `td_*` (multi-function tap dances), `ctrl_leader` (hold-tap: hold=Ctrl, tap=leader)
 
 ## ZMK module stack (urob, pinned at v0.3)
 
