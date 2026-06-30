@@ -2,7 +2,7 @@
 
 compatible = "zmk,combos";
 #define LONG_TIMEOUT_MS 100
-#define NORMAL_LAYERS 0 1 2 3 4 5 6 7 8 9 10 11 12
+#define NORMAL_LAYERS 0 1 2 3 4 5 6 7 8 9 10 11
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -53,6 +53,7 @@ COMBO(l_multimedia, &tog MULTIMEDIA, 4 24)
 COMBO(l_leader, &leader, 13 23)
 COMBO(l_base, &to BASE, 14 24)
 
+COMBO(l_alt, &sk LALT, 10 30)
 COMBO(l_gui, &sk LGUI, 0 30)
 COMBO(l_fun, &td_fun, 14 30)
 COMBO(l_compose, &kp LS(RALT), 20 30)
@@ -83,6 +84,7 @@ COMBO(r_leader, &leader, 16 26)
 COMBO(r_nav, &td_nav, 6 16)
 COMBO(r_alttab, &swap, 7 17)
 
+COMBO(r_alt, &sk RALT, 16 33)
 COMBO(r_gui, &sk RGUI, 9 33)
 COMBO(r_fun, &td_fun, 15 33)
 COMBO(r_numpad, &td_npd, 25 33)
