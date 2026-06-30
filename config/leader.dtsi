@@ -1,14 +1,20 @@
 #undef LEADER
 #define LEADER(name, leader_bindings, leader_sequence) \
-  leader: leader_##name { \
-    compatible = "zmk,behavior-leader-key"; \
-    #binding-cells = <0>; \
-    ignore-keys = <LSHFT RSHFT>; \
-    leader_sequence_ ## name { \
-      bindings = <leader_bindings>; \
-      sequence = <leader_sequence>; \
-    }; \
+  leader_sequence_ ## name { \
+    bindings = <leader_bindings>; \
+    sequence = <leader_sequence>; \
   };
 
+LEADER(krunner, &kp LA(SPACE), SPACE)
+
 LEADER(l_ctrlaltdel, &kp LC(LA(DEL)), Q)
-//LEADER(r_ctrlaltdel, &kp LC(LA(DEL)), P)
+LEADER(l_symbol, &sl SYMBOL, F)
+LEADER(l_symbol_mirror, &sl SYMBOL_MIRROR, D)
+LEADER(l_term_new, &kp LC(LA(T)), T T)
+LEADER(l_term_tab, &kp LC(LS(T)), T G)
+
+LEADER(r_ctrlaltdel, &kp LC(LA(DEL)), P)
+LEADER(r_symbol, &sl SYMBOL, J)
+LEADER(r_symbol_mirror, &sl SYMBOL_MIRROR, K)
+LEADER(r_term_new, &kp LC(LA(T)), Y Y)
+LEADER(r_term_tab, &kp LC(LS(T)), Y H)

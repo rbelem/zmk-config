@@ -7,14 +7,20 @@
     "dtc@latest",
     "ninja@latest",
     "yq@latest",
+    "gperf@latest",
+    "gcc-arm-embedded@latest",
   ],
+  "env": {
+    "ZEPHYR_TOOLCHAIN_VARIANT": "gnuarmemb",
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "1",
+    "GNUARMEMB_TOOLCHAIN_PATH": "$PWD/.devbox/nix/profile/default"
+  },
   "shell": {
     "init_hook": [
       ". $VENV_DIR/bin/activate",
-      "uv pip install west",
-      "west init -l config",
-      "west update --fetch-opt=--filter=blob:none",
-      "west zephyr-export",
+      "uv pip install west pyelftools",
+      "test -d .west || west init -l config",
+      "west update --fetch-opt=--filter=blob:none"
     ],
     "scripts": {
       "_parse_targets": [
@@ -32,18 +38,16 @@
         "shield=$2",
         "snippet=$3",
         "artifact=$4",
-        "west_args=",
-
         "artifact=\"${artifact:-${shield:+${shield// /+}-}${board}}\"",
-        "build_dir=\"{{ build / '$artifact' }}\"",
+        "build_dir=\"build/$artifact\"",
 
         "echo \"Building firmware for $artifact...\"",
-        "west build -s zmk/app -d \"$build_dir\" -b $board {{ west_args }} ${snippet:+-S \"$snippet\"} -- \\",
-        "  -DZMK_CONFIG=\"{{ config }}\" ${shield:+-DSHIELD=\"$shield\"}",
+        "west build -s zmk/app -d \"$build_dir\" -b $board ${@:5} ${snippet:+-S \"$snippet\"} -- \\",
+        "  -DZMK_CONFIG=\"$PWD/config\" ${shield:+-DSHIELD=\"$shield\"}",
         "if [[ -f \"$build_dir/zephyr/zmk.uf2\" ]]; then",
-        "  mkdir -p \"{{ out }}\" && cp \"$build_dir/zephyr/zmk.uf2\" \"{{ out }}/$artifact.uf2\"",
+        "  mkdir -p \"firmware\" && cp \"$build_dir/zephyr/zmk.uf2\" \"firmware/$artifact.uf2\"",
         "else",
-        "  mkdir -p \"{{ out }}\" && cp \"$build_dir/zephyr/zmk.bin\" \"{{ out }}/$artifact.bin\"",
+        "  mkdir -p \"firmware\" && cp \"$build_dir/zephyr/zmk.bin\" \"firmware/$artifact.bin\"",
         "fi",
       ],
 
@@ -52,13 +56,14 @@
         "set -euo pipefail",
 
         "expr=$1",
-        "west_args=",
-
-        "targets=$(just _parse_targets {{ expr }})",
+        "west_args=${@:2}",
+        "attrs=\"[.board, .shield, .snippet, .\\\"artifact-name\\\"]\"",
+        "filter=\"(($attrs | map(. // [.]) | combinations), ((.include // {})[] | $attrs)) | join(\\\",\\\")\"",
+        "targets=$(yq -r \"$filter\" build.yaml | grep -v \"^,\" | grep -i \"${expr/#all/.*}\" 2>/dev/null)",
 
         "[[ -z $targets ]] && echo \"No matching targets found. Aborting...\" >&2 && exit 1",
         "echo \"$targets\" | while IFS=, read -r board shield snippet artifact; do",
-        "  devbox run _build_single \"$board\" \"$shield\" \"$snippet\" \"$artifact\" {{ west_args }}",
+        "  devbox run _build_single \"$board\" \"$shield\" \"$snippet\" \"$artifact\" \"$west_args\"",
         "done",
       ],
     },
