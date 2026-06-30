@@ -7,19 +7,26 @@
 
 LEADER(krunner, &kp LA(SPACE), SPACE)
 
+// Positional mirrors (via qwerty_mirror):
+// Q↔P  W↔O  E↔I  R↔U  T↔Y
+// A↔~  S↔L  D↔K  F↔J  G↔H
+// Z↔;  X↔.  C↔,  V↔M  B↔N
+
+// Basic sequences — left
 LEADER(l_ctrlaltdel, &kp LC(LA(DEL)), Q)
 LEADER(l_symbol, &sl SYMBOL, F)
 LEADER(l_symbol_mirror, &sl SYMBOL_MIRROR, D)
 LEADER(l_term_new, &kp LC(LA(T)), T T)
 LEADER(l_term_tab, &kp LC(LS(T)), T G)
 
-LEADER(r_ctrlaltdel, &kp LC(LA(DEL)), P)
-LEADER(r_symbol, &sl SYMBOL, J)
-LEADER(r_symbol_mirror, &sl SYMBOL_MIRROR, K)
-LEADER(r_term_new, &kp LC(LA(T)), Y Y)
-LEADER(r_term_tab, &kp LC(LS(T)), Y H)
+// Basic sequences — right (positional mirrors)
+LEADER(r_ctrlaltdel, &kp LC(LA(DEL)), P)  // Q↔P
+LEADER(r_symbol, &sl SYMBOL, J)            // F↔J
+LEADER(r_symbol_mirror, &sl SYMBOL_MIRROR, K) // D↔K
+LEADER(r_term_new, &kp LC(LA(T)), Y Y)     // T↔Y
+LEADER(r_term_tab, &kp LC(LS(T)), Y H)     // T↔Y, G↔H
 
-// F-keys — left hand (V prefix, all left-hand keys)
+// F-keys — left (V prefix, V↔M)
 LEADER(l_f1, &kp F1, V Q)
 LEADER(l_f2, &kp F2, V W)
 LEADER(l_f3, &kp F3, V E)
@@ -33,23 +40,23 @@ LEADER(l_f10, &kp F10, V G)
 LEADER(l_f11, &kp F11, V Z)
 LEADER(l_f12, &kp F12, V X)
 
-// F-keys — right hand (M prefix)
-LEADER(r_f1, &kp F1, M Y)
-LEADER(r_f2, &kp F2, M U)
-LEADER(r_f3, &kp F3, M I)
-LEADER(r_f4, &kp F4, M O)
-LEADER(r_f5, &kp F5, M P)
-LEADER(r_f6, &kp F6, M H)
-LEADER(r_f7, &kp F7, M J)
-LEADER(r_f8, &kp F8, M K)
-LEADER(r_f9, &kp F9, M L)
-LEADER(r_f10, &kp F10, M BR_TILDE)
-LEADER(r_f11, &kp F11, M N)
-LEADER(r_f12, &kp F12, M M)
+// F-keys — right (M prefix, positional mirrors)
+LEADER(r_f1, &kp F1, M P)           // V↔M, Q↔P
+LEADER(r_f2, &kp F2, M O)           // V↔M, W↔O
+LEADER(r_f3, &kp F3, M I)           // V↔M, E↔I
+LEADER(r_f4, &kp F4, M U)           // V↔M, R↔U
+LEADER(r_f5, &kp F5, M Y)           // V↔M, T↔Y
+LEADER(r_f6, &kp F6, M BR_TILDE)    // V↔M, A↔~
+LEADER(r_f7, &kp F7, M L)           // V↔M, S↔L
+LEADER(r_f8, &kp F8, M K)           // V↔M, D↔K
+LEADER(r_f9, &kp F9, M J)           // V↔M, F↔J
+LEADER(r_f10, &kp F10, M H)         // V↔M, G↔H
+LEADER(r_f11, &kp F11, M BR_SEMI)   // V↔M, Z↔;
+LEADER(r_f12, &kp F12, M DOT)       // V↔M, X↔.
 
 // Alt+F4
 LEADER(l_alt_f4, &kp LA(F4), A R)
-LEADER(r_alt_f4, &kp LA(F4), DOT O)
+LEADER(r_alt_f4, &kp LA(F4), BR_TILDE U)  // A↔~, R↔U
 
 // Accented chars — left hand
 LEADER(l_br_a_acute, &compose_acute A, A A)
@@ -58,23 +65,23 @@ LEADER(l_br_a_tilde, &compose_tilde A, A T)
 LEADER(l_br_a_circ,  &compose_circ A,  A C)
 LEADER(l_br_e_acute, &compose_acute E, E E)
 LEADER(l_br_e_circ,  &compose_circ E,  E C)
-LEADER(l_br_i_acute, &compose_acute I, Z Z)
-LEADER(l_br_o_acute, &compose_acute O, X X)
-LEADER(l_br_o_circ,  &compose_circ O,  X V)
-LEADER(l_br_o_tilde, &compose_tilde O, X B)
-LEADER(l_br_u_acute, &compose_acute U, B B)
+LEADER(l_br_i_acute, &compose_acute I, S S)  // I-sub: S↔L
+LEADER(l_br_o_acute, &compose_acute O, W W)  // O-sub: W↔O
+LEADER(l_br_o_circ,  &compose_circ O,  W C)
+LEADER(l_br_o_tilde, &compose_tilde O, W T)
+LEADER(l_br_u_acute, &compose_acute U, R R)  // U-sub: R↔U
 LEADER(l_br_cedil,   &compose_cedil,   C C)
 
-// Accented chars — right hand
-LEADER(r_br_a_acute, &compose_acute A, COMMA COMMA)
-LEADER(r_br_a_grave, &compose_grave A, COMMA DOT)
-LEADER(r_br_a_tilde, &compose_tilde A, COMMA BR_TILDE)
-LEADER(r_br_a_circ,  &compose_circ A,  COMMA N)
-LEADER(r_br_e_acute, &compose_acute E, DOT DOT)
-LEADER(r_br_e_circ,  &compose_circ E,  DOT N)
-LEADER(r_br_i_acute, &compose_acute I, I I)
-LEADER(r_br_o_acute, &compose_acute O, O O)
-LEADER(r_br_o_circ,  &compose_circ O,  O C)
-LEADER(r_br_o_tilde, &compose_tilde O, O T)
-LEADER(r_br_u_acute, &compose_acute U, U U)
-LEADER(r_br_cedil,   &compose_cedil,   BR_SEMI BR_SEMI)
+// Accented chars — right hand (positional mirrors of left)
+LEADER(r_br_a_acute, &compose_acute A, BR_TILDE BR_TILDE)  // A↔~
+LEADER(r_br_a_grave, &compose_grave A, BR_TILDE H)         // A↔~, G↔H
+LEADER(r_br_a_tilde, &compose_tilde A, BR_TILDE Y)         // A↔~, T↔Y
+LEADER(r_br_a_circ,  &compose_circ A,  BR_TILDE COMMA)     // A↔~, C↔,
+LEADER(r_br_e_acute, &compose_acute E, I I)                // E↔I
+LEADER(r_br_e_circ,  &compose_circ E,  I COMMA)            // E↔I, C↔,
+LEADER(r_br_i_acute, &compose_acute I, L L)                // S↔L
+LEADER(r_br_o_acute, &compose_acute O, O O)                // W↔O
+LEADER(r_br_o_circ,  &compose_circ O,  O COMMA)            // W↔O, C↔,
+LEADER(r_br_o_tilde, &compose_tilde O, O Y)                // W↔O, T↔Y
+LEADER(r_br_u_acute, &compose_acute U, U U)                // R↔U
+LEADER(r_br_cedil,   &compose_cedil,   COMMA COMMA)        // C↔,
