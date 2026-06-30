@@ -2,7 +2,7 @@
 
 compatible = "zmk,combos";
 #define LONG_TIMEOUT_MS 100
-#define NORMAL_LAYERS 0 1 2 3 4 5 6 7 8 9 10 11
+#define NORMAL_LAYERS 0 1 2 3 4 5 6 7 8 9 10
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -84,18 +84,20 @@ COMBO(r_leader, &leader, 16 26)
 COMBO(r_nav, &td_nav, 6 16)
 COMBO(r_alttab, &swap, 7 17)
 
-COMBO(r_alt, &sk RALT, 16 33)
+COMBO(r_alt, &sk RALT, 19 33)
 COMBO(r_gui, &sk RGUI, 9 33)
 COMBO(r_fun, &td_fun, 15 33)
 COMBO(r_numpad, &td_npd, 25 33)
 COMBO(r_compose, &kp LS(RALT), 29 33)
 
-COMBO(r_sys, &sl BLUETOOTH, 5 9)
+COMBO(r_bluetooth, &sl BLUETOOTH, 5 9)
 COMBO(r_reset, &sys_reset, 25 29)
 COMBO(r_bootloader, &bootloader,  9 19 29)
 
 LAYER_COMBO(r_mouse_mclk, &mkp MCLK, 32 33, MOUSE)
 
-// Both sides
-COMBO_LONG(capsword, &caps_word, 14 15)
-COMBO_LONG(lockscreen, &kp PAUSE_BREAK, 24 25)
+// Single-hand capsword (left: F+G, right: H+J) and lockscreen (left: V+B, right: N+M)
+COMBO_LONG(l_capsword, &caps_word, 13 14)
+COMBO_LONG(r_capsword, &caps_word, 15 16)
+COMBO_LONG(l_lockscreen, &kp PAUSE_BREAK, 23 24)
+COMBO_LONG(r_lockscreen, &kp PAUSE_BREAK, 25 26)
