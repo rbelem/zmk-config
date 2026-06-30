@@ -36,10 +36,9 @@
 #define NAVIGATION 6
 #define MULTIMEDIA 7
 #define FUNCTION 8
-#define FUNCTION_SL 9
-#define BLUETOOTH 10
-#define SHORTCUT 11
-#define MOUSE 12
+#define BLUETOOTH 9
+#define SHORTCUT 10
+#define MOUSE 11
 
 
 /* Global settings */
@@ -147,7 +146,7 @@
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <TD_TAPPING_TERM_MS>;
-      bindings = <&sl FUNCTION_SL>, <&tog FUNCTION>;
+      bindings = <&sl FUNCTION>, <&tog FUNCTION>;
     };
     ctrl_leader: ctrl_leader {
       compatible = "zmk,behavior-hold-tap";
@@ -270,14 +269,6 @@
       >;
     };
 
-    function_sticky_layer {
-      bindings = <
-&none &sk F7 &sk F8 &sk F9 &sk F12    &none &sk F7 &sk F8 &sk F9 &sk F12
-&none &sk F4 &sk F5 &sk F6 &sk F11    &none &sk F4 &sk F5 &sk F6 &sk F11
-&none &sk F1 &sk F2 &sk F3 &sk F10    &none &sk F1 &sk F2 &sk F3 &sk F10
-&trans &trans                         &trans &trans
-      >;
-    };
 
     bluetooth_layer {
       bindings = <
